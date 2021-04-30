@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header></header>
+    <top />
     <div class="mx-32 mb-32">
       <div class="flex justify-center py-16">
         <h2 class="text-5xl">CONTACT US</h2>
@@ -60,16 +60,17 @@
 
       </div>
     </div>
-    <footer></footer>
+    <bottom />
   </div>
 </template>
 
 <script>
-import Header from '../components/top.vue';
+import top from '../components/top.vue';
+import bottom from '../components/bottom.vue';
 
 export default {
   name: 'Contact',
-  components: { Header },
+  components: { top, bottom },
   props: {
     msg: String,
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header></header>
+    <top />
     <div class="mx-32 mb-32">
       <div class="flex justify-center py-16">
         <h2 class="text-5xl">THE BAKE CLUB</h2>
@@ -13,16 +13,17 @@
       </div>
       <h3 class="text-3xl flex justify-center">COMING SOON!</h3>
     </div>
-    <footer></footer>
+    <bottom />
   </div>
 </template>
 
 <script>
-import Header from '../components/top.vue';
+import top from '../components/top.vue';
+import bottom from '../components/bottom.vue';
 
 export default {
   name: 'BakeClub',
-  components: { Header },
+  components: { top, bottom },
   props: {
     msg: String,
   },

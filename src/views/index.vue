@@ -27,10 +27,11 @@
 
 <script>
 import top from '../components/top.vue';
+import bottom from '../components/bottom.vue';
 
 export default {
   name: 'Home',
-  components: { top },
+  components: { top, bottom },
 };
 </script>
 
