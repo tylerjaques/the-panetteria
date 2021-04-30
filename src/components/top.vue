@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .header {
+    font-family: "Libre Baskerville",serif;
+  }
 </style>
