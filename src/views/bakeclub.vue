@@ -1,7 +1,7 @@
 <template>
   <div>
     <top />
-    <div class="mx-32 mb-32">
+    <div class="body">
       <div class="flex justify-center py-16">
         <h2 class="text-5xl">THE BAKE CLUB</h2>
       </div>

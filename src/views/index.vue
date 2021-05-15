@@ -1,11 +1,8 @@
 <template>
   <div>
     <top />
-    <div>
-      <img src="https://i.ibb.co/9w1fZgn/mae-mu-se-Bky-Rc-FP8-M-unsplash.jpg" alt="mae-mu-se-Bky-Rc-FP8-M-unsplash" border="0" />
-    </div>
-    <div class="mx-32">
-      <div class="my-16 mb-8 inline-block flex justify-center">
+    <div class="body">
+      <div class="my-16 inline-block flex justify-center">
         <p>Located in the heart of downtown historic <strong>Amherstburg
         </strong>, The Panetteria is an artisan bakery specializing in <strong>
           bread and sweet & savoury pastries</strong>. Focus on quality,

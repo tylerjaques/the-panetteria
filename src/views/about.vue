@@ -1,8 +1,8 @@
 <template>
   <div>
     <top />
-    <div class="mx-32 mb-32">
-      <div class="flex justify-center py-16">
+    <div class="body">
+      <div class="flex justify-center">
         <h2 class="text-5xl">ABOUT US</h2>
       </div>
       <div class="mb-8 inline-block flex justify-center">
