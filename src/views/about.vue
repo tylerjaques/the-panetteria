@@ -1,9 +1,9 @@
 <template>
   <div>
-    <top />
+    <top background-image="url('https://i.imgur.com/3IZXG4X.jpg')"/>
     <div class="body">
       <div class="flex justify-center">
-        <h2 class="text-5xl">ABOUT US</h2>
+        <h2 class="text-5xl mt-4 mb-8">ABOUT US</h2>
       </div>
       <div class="mb-8 inline-block flex justify-center">
         <p>Born and raised in Scotland, Simon Briggs graduated from the Stratford Chefs School in 2011 and has worked in various establishments in Stratford, Guelph, Kitchener, and London. His style of food is steeped in traditional French technique. Simon was previously an instructor with the Stratford Chefs School for 7 years teaching both pastry and cookery, as well as at the London Training Centre for 2 years as a chef instructor. In his free time, Simon is an avid gardener.</p>

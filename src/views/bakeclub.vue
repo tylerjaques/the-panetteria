@@ -1,9 +1,9 @@
 <template>
   <div>
-    <top />
+    <top background-image="url('https://i.imgur.com/GROUCq0.jpg')"/>
     <div class="body">
-      <div class="flex justify-center py-16">
-        <h2 class="text-5xl">THE BAKE CLUB</h2>
+      <div class="flex justify-center">
+        <h2 class="text-5xl mt-4 mb-8">THE BAKE CLUB</h2>
       </div>
       <div class="mb-8 inline-block flex justify-center">
         <p>Join our bakers in an intimate hands-on setting to learn skills & techniques to make you a successful baker at home!</p>

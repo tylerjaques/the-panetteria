@@ -1,9 +1,9 @@
 <template>
   <div>
-    <top />
+    <top background-image="url('https://i.imgur.com/Q19KiR1.jpg')"/>
     <div class="body">
-      <div class="flex justify-center py-16">
-        <h2 class="text-5xl">PRODUCTS</h2>
+      <div class="flex justify-center">
+        <h2 class="text-5xl mt-4 mb-8">PRODUCTS</h2>
       </div>
       <div class="products">
         <h3 class="text-4xl mb-8">BREADS</h3>

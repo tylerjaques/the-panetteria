@@ -1,11 +1,23 @@
 <template>
   <div id="app">
-    <router-view/>
+    <div class="flex-wrapper">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
   .body {
-    @apply sm:mx-0 md:mx-32
+    font-family: "Open Sans", sans-serif;
+    flex-grow: 1;
+
+    @apply text-lg
+  }
+
+  .flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
   }
 </style>
