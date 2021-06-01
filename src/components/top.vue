@@ -1,14 +1,14 @@
 <template>
-  <div class="header sticky w-full md:text-2xl bg-black text-white tracking-widest" :style="style">
+  <div class="header sticky w-full text-2xl bg-black text-white tracking-widest" :style="style">
     <div class="grid grid-rows-2 my-8 md:my-0 mx-8 md:mx-32">
       <div class="mb-8">
           <router-link class="link title" to="/">THE PANETTERIA</router-link>
       </div>
-      <div class="flex flex-wrap grid md:grid-cols-8 ">
-        <router-link class="page" to="/products">PRODUCTS</router-link><span class="divider">|</span>
-        <router-link class="page" to="/about">ABOUT US</router-link><span class="divider">|</span>
-        <router-link class="page" to="/contact">CONTACT US</router-link><span class="divider">|</span>
-        <router-link class="page" to="/bake-club">THE BAKE CLUB</router-link>
+      <div class="flex flex-wrap grid md:grid-cols-6">
+        <router-link class="page" to="/products">PRODUCTS</router-link>
+        <router-link class="page" to="/about">ABOUT US</router-link>
+        <router-link class="page" to="/contact">CONTACT US</router-link>
+        <router-link class="page col-span-2" to="/bake-club">THE BAKE CLUB</router-link>
       </div>
     </div>
   </div>
@@ -43,11 +43,11 @@ export default {
   }
 
   .title {
-     @apply mr-auto;
+     @apply text-4xl mr-auto;
   }
 
   .page {
-    @apply whitespace-nowrap md:col-span-1 md:pr-4 mr-4;
+    @apply whitespace-nowrap col-span-6 md:col-span-1 md:pr-4 mr-4;
   }
 
   .divider {
