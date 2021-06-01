@@ -1,11 +1,15 @@
 <template>
-  <div class="header sticky w-full bg-black text-white tracking-widest md:text-2xl" :style="style">
-    <div id="links" class="md:ml-4">
-          <router-link class="title" to="/">THE PANETTERIA</router-link>
-          <router-link to="/products">PRODUCTS</router-link>
-          <router-link to="/about">ABOUT US</router-link>
-          <router-link to="/contact">CONTACT US</router-link>
-          <router-link to="/bake-club">THE BAKE CLUB</router-link>
+  <div class="header sticky w-full md:text-2xl bg-black text-white tracking-widest" :style="style">
+    <div class="grid grid-rows-2 my-8 md:my-0 mx-8 md:mx-32">
+      <div class="mb-8">
+          <router-link class="link title" to="/">THE PANETTERIA</router-link>
+      </div>
+      <div class="flex flex-wrap grid md:grid-cols-8 ">
+        <router-link class="page" to="/products">PRODUCTS</router-link><span class="divider">|</span>
+        <router-link class="page" to="/about">ABOUT US</router-link><span class="divider">|</span>
+        <router-link class="page" to="/contact">CONTACT US</router-link><span class="divider">|</span>
+        <router-link class="page" to="/bake-club">THE BAKE CLUB</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -28,25 +32,26 @@ export default {
   .header {
     font-family: "Libre Baskerville",serif;
     background-size: cover;
-  }
 
-  #links {
-    @apply flex flex-wrap content-end pb-2;
+    @apply flex flex-wrap justify-between md:content-end;
 
     /* Mobile */
-    @apply
-    h-32;
+    @apply h-auto;
 
     /* Full screen */
-    @apply
-    md:h-72
-
+    @apply md:h-72
   }
 
   .title {
      @apply mr-auto;
   }
 
+  .page {
+    @apply whitespace-nowrap md:col-span-1 md:pr-4 mr-4;
+  }
 
+  .divider {
+    @apply justify-self-center hidden md:inline;
+  }
 
 </style>

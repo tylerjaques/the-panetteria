@@ -8,16 +8,13 @@
 
 <style lang="scss">
   .body {
-    font-family: "Open Sans", sans-serif;
-    flex-grow: 1;
-
-    @apply text-lg
-  }
-
-  .flex-wrapper {
     display: flex;
-    min-height: 100vh;
+    min-height: 302px;
     flex-direction: column;
-    align-items: stretch;
+
+    font-family: "Open Sans", sans-serif;
+    color: #252525;
+
+    @apply text-lg mx-8 my-8 md:mx-32 md:my-8
   }
 </style>

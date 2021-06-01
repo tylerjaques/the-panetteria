@@ -1,32 +1,30 @@
 <template>
-  <div class="footer">
-    <div class="flex flex-wrap justify-around">
-      <div>
+  <div class="footer flex flex-wrap justify-around">
+      <div class="mt-8">
         <h2 class="text-2xl">Bakery Hours</h2>
-        <div class="mb-8 grid grid-cols-2">
-          <label>Tuesday - Saturday:</label><p>8am - 6pm</p>
-          <label>Sunday:</label><p>9am - 3pm</p>
-          <label>Monday:</label><p>CLOSED</p>
+        <div class="grid grid-cols-2 justify-items-end">
+          <label class="justify-self-start">Tuesday - Saturday:</label><p>8am - 6pm</p>
+          <label class="justify-self-start">Sunday:</label><p>9am - 3pm</p>
+          <label class="justify-self-start">Monday:</label><p>CLOSED</p>
         </div>
       </div>
-      <div>
+      <div class="mt-8">
         <h2 class="text-2xl">Information</h2>
-        <div class="mb-8 grid grid-cols-2">
+        <div class="grid grid-cols-2">
           <label>Email:</label><a href="mailto:info@thepanetteria.com">info@thepanetteria.com</a>
           <label>Phone:</label><a href="tel:555-555-5555">555-555-5555</a>
-          <label>Socials:</label><div><a href="#"><i class="fab fa-instagram-square"></i></a> <a href="#"><i class="fab fa-facebook-square"></i></a></div>
+          <label>Socials:</label>
         </div>
       </div>
-      <div>
+      <div class="my-8">
         <h2 class="text-2xl">Location</h2>
         <p>248 Ramsay St</p>
         <p>Amherstburg, ON, Canada</p>
         <p>N9V 1Y2</p>
-        <div class="mt-8 map-responsive">
+        <div class="mt-4 map-responsive">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.237069628985!2d-83.1139347845518!3d42.10239327920499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3c84c9d7c001%3A0x1e02cf6f022618b!2s248%20Ramsay%20St%2C%20Amherstburg%2C%20ON%20N9V%201Y2!5e0!3m2!1sen!2sca!4v1618187247268!5m2!1sen!2sca" style="border:0;" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -38,10 +36,16 @@ export default {
 
 <style scoped>
   .footer {
-    font-family: "Libre Baskerville",serif;
-    background-color: black;
+    font-family: "Libre Baskerville", serif;
+    font-size: 14px;
+    background-color: #252525;
 
-    @apply text-white mt-auto;
+    @apply text-white justify-start mt-auto;
+
+  }
+
+  .footer > div {
+    @apply mx-8;
   }
 
 </style>

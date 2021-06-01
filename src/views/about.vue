@@ -2,7 +2,7 @@
   <div>
     <top background-image="url('https://i.imgur.com/3IZXG4X.jpg')"/>
     <div class="body">
-      <div class="flex justify-center">
+      <div class="flex">
         <h2 class="text-5xl mt-4 mb-8">ABOUT US</h2>
       </div>
       <div class="mb-8 inline-block flex justify-center">
