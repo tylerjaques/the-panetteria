@@ -15,6 +15,6 @@
     font-family: "Open Sans", sans-serif;
     color: #252525;
 
-    @apply text-lg mx-8 my-8 md:mx-32 md:my-8
+    @apply text-lg mx-4 my-8 md:mx-16 md:my-8
   }
 </style>

@@ -37,15 +37,14 @@ export default {
 <style scoped>
   .footer {
     font-family: "Libre Baskerville", serif;
-    font-size: 14px;
     background-color: #252525;
 
-    @apply text-white justify-start mt-auto;
+    @apply justify-start mt-auto text-white text-xs md:text-base;
 
   }
 
   .footer > div {
-    @apply mx-8;
+    @apply mx-4 md:mx-16;
   }
 
 </style>

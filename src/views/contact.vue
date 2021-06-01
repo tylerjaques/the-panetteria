@@ -2,10 +2,10 @@
   <div>
     <top background-image="url('https://i.imgur.com/OpCVDF5.jpg')"/>
     <div class="body">
-      <div class="flex justify-center">
+      <div class="flex">
         <h2 class="text-5xl mt-4 mb-8">CONTACT US</h2>
       </div>
-      <div class="flex justify-around">
+      <div class="flex">
         <div class="mb-4">
           <h2 class="text-2xl">Questions or Comments?</h2>
           <form action="#" method="POST">

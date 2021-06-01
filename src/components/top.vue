@@ -1,6 +1,6 @@
 <template>
   <div class="header sticky w-full text-2xl bg-black text-white tracking-widest" :style="style">
-    <div class="grid grid-rows-2 my-8 md:my-0 mx-8 md:mx-32">
+    <div class="grid grid-rows-2 my-8 md:my-0 mx-8 md:mx-16">
       <div class="mb-8">
           <router-link class="link title" to="/">THE PANETTERIA</router-link>
       </div>

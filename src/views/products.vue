@@ -9,9 +9,9 @@
         <h3 class="text-4xl my-4">{{ category.category }}</h3>
         <div v-for="sub in category.subcategories">
           <div class="text-2xl my-4 ">{{ sub.category }}</div>
-          <div class="flex flex-wrap grid grid-cols-2">
-            <div class="w-3/4 mb-4" v-for="product in sub.products">
-              <img class="md:mr-4" :src="product.photo" :alt="product.name" />
+          <div class="grid grid-cols-2">
+            <div class="w-5/6 mb-4" v-for="product in sub.products">
+              <img :src="product.photo" :alt="product.name" />
               <p class="italic">{{ product.name }}</p>
             </div>
           </div>
