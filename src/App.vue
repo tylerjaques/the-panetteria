@@ -12,9 +12,9 @@
     min-height: 302px;
     flex-direction: column;
 
-    font-family: "Open Sans", sans-serif;
+    font-family: "Libre Baskerville", sans-serif;
     color: #252525;
 
-    @apply text-lg mx-4 my-8 md:mx-16 md:my-8
+    @apply text-lg mx-4 my-8 md:mx-16 md:my-8;
   }
 </style>

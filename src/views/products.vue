@@ -6,13 +6,13 @@
         <h2 class="text-5xl mt-4 mb-8">PRODUCTS</h2>
       </div>
       <div v-for="category in products.categories">
-        <h3 class="text-4xl my-4">{{ category.category }}</h3>
+        <h3 class="text-3xl my-4">{{ category.category }}</h3>
         <div v-for="sub in category.subcategories">
           <div class="text-2xl my-4 ">{{ sub.category }}</div>
           <div class="grid grid-cols-2">
             <div class="w-5/6 mb-4" v-for="product in sub.products">
               <img :src="product.photo" :alt="product.name" />
-              <p class="italic">{{ product.name }}</p>
+              <p>{{ product.name }}</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="header sticky w-full text-2xl bg-black text-white tracking-widest" :style="style">
+  <div class="header sticky w-full text-2xl bg-black bg-opacity-50 text-white tracking-widest">
     <div class="grid grid-rows-2 my-8 md:my-0 mx-4 md:mx-16">
       <div class="mb-8">
           <router-link class="link title" to="/">THE PANETTERIA</router-link>
@@ -17,23 +17,15 @@
 <script>
 export default {
   name: 'Top',
-  props: [
-    'backgroundImage'
-  ],
-  computed: {
-    style() {
-        return 'background-image: ' + this.backgroundImage;
-    }
-  }
 };
 </script>
 
 <style scoped>
   .header {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Libre Baskerville",serif;
     background-size: cover;
 
-    @apply flex flex-wrap justify-between md:content-end;
+    @apply flex flex-wrap md:content-end;
 
     /* Mobile */
     @apply h-auto;
@@ -43,7 +35,7 @@ export default {
   }
 
   .title {
-     @apply text-4xl md:text-5xl mr-auto;
+     @apply text-4xl mr-auto;
   }
 
   .page {
