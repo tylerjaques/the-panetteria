@@ -39,7 +39,7 @@ export default {
     font-family: "Libre Baskerville", serif;
     background-color: #252525;
 
-    @apply justify-start mt-0 text-white text-xs md:text-base;
+    @apply justify-start mt-0 md:mt-96 text-white text-xs md:text-base;
 
   }
 

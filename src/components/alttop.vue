@@ -35,7 +35,7 @@ export default {
   }
 
   .title {
-     @apply text-4xl mr-auto;
+     @apply text-4xl md:text-5xl mr-auto;
   }
 
   .page {
