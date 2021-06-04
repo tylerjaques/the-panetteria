@@ -9,7 +9,7 @@
           "products": [
             {
               "name": "Aburg Sourdough",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "photo": "./images/Bread1.jpg"
             },
             {
               "name": "Lot 10 Loaf",

@@ -4,7 +4,7 @@
       <div class="mb-8">
           <router-link class="link title" to="/">THE PANETTERIA</router-link>
       </div>
-      <div class="flex flex-wrap grid md:grid-cols-6">
+      <div class="grid grid-cols-6 md:flex md:flex-wrap">
         <router-link class="page" to="/products">PRODUCTS</router-link>
         <router-link class="page" to="/about">ABOUT US</router-link>
         <router-link class="page" to="/contact">CONTACT US</router-link>

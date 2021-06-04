@@ -29,7 +29,8 @@ export default {
     ];
 
     return new VueRouter({
-      routes,
+      // mode: 'history',
+      routes: routes,
     });
   },
 };

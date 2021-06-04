@@ -25,6 +25,7 @@
           please contact us directly with your specific inquiries.</p>
       </div>
     </div>
+    <button id="scrollToTop" @click="scrollToTop" :class="scrollToTopStyle" title="Go to top">Top</button>
     <bottom />
   </div>
 </template>
@@ -42,12 +43,42 @@ export default {
   },
   data(){
     return {
-      'products': products
+      products: products,
+      scrollToTopStyle: 'hidden'
     }
-  }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    },
+    handleScroll() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        this.scrollToTopStyle = "block";
+      } else {
+        this.scrollToTopStyle = "hidden";
+      }
+    }
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  #scrollToTop {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    font-size: 1rem; /* Increase font size */
+  }
 </style>

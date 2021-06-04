@@ -7,30 +7,28 @@
       </div>
       <div class="flex">
         <div class="mb-4">
-          <h2 class="text-2xl">Questions or Comments?</h2>
-          <form action="#" method="POST">
-            <div class="col-span-6 sm:col-span-3">
-              <label for="first_name" class="block">First name</label>
-              <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-3">
-              <label for="last_name" class="block">Last name</label>
-              <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-4">
-              <label for="email_address" class="block">Email address</label>
-              <input type="email" name="email_address" id="email_address" autocomplete="email" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-4">
-              <label for="phone_number" class="block">Phone</label>
-              <input type="tel" name="phone_number" id="phone_number" autocomplete="tel" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-4 col-span-6 sm:col-span-4">
-              <label for="message" class="block">Message</label>
-              <textarea name="message" id="message" class="mt-1 h-24 p-1 block w-full border border-black"></textarea>
-            </div>
-            <input class="p-1 border border-black" type="submit" value="Send">
-          </form>
+          <h2 class="text-3xl mb-4">Questions or Comments?</h2>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="first_name" class="block">First name</label>
+            <input v-model="firstName" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 p-1 block w-full border border-black">
+          </div>
+          <div class="mb-2 col-span-6 sm:col-span-3">
+            <label for="last_name" class="block">Last name</label>
+            <input v-model="lastName" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 p-1 block w-full border border-black">
+          </div>
+          <div class="mb-2 col-span-6 sm:col-span-4">
+            <label for="email_address" class="block">Email address</label>
+            <input v-model="email" name="email_address" id="email_address" autocomplete="email" class="mt-1 p-1 block w-full border border-black">
+          </div>
+          <div class="mb-2 col-span-6 sm:col-span-4">
+            <label for="phone_number" class="block">Phone</label>
+            <input v-model="phone" name="phone_number" id="phone_number" autocomplete="tel" class="mt-1 p-1 block w-full border border-black">
+          </div>
+          <div class="mb-4 col-span-6 sm:col-span-4">
+            <label for="message" class="block">Message</label>
+            <textarea v-model="message" name="message" id="message" class="mt-1 h-24 p-1 block w-full border border-black"></textarea>
+          </div>
+          <button @click="sendEmail" class="p-1 border border-black">Send</button>
         </div>
       </div>
     </div>
@@ -48,6 +46,28 @@ export default {
   props: {
     msg: String,
   },
+  data() {
+    return {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: '',
+    }
+  },
+  methods: {
+    sendEmail() {
+      console.log('test');
+      let subject = `Contact Us: ${this.fullName}`;
+      let body = `Full name: ${this.fullName}%0D%0AEmail: ${this.email}%0D%0APhone: ${this.phone}%0D%0AMessage: ${this.message}`;
+      window.open(`mailto:info@thepaneterria.ca?subject=${subject}&body=${body}`);
+    }
+  },
+  computed: {
+    fullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  }
 };
 </script>
 
