@@ -1,8 +1,8 @@
 <template>
-  <div class="footer flex flex-wrap justify-around">
+  <div class="footer flex flex-wrap justify-start">
       <div class="mt-8">
         <h2 class="text-2xl">Bakery Hours</h2>
-        <div class="grid grid-cols-2 justify-items-end">
+        <div class="grid grid-cols-2">
           <label class="justify-self-start">Tuesday - Saturday:</label><p>8am - 6pm</p>
           <label class="justify-self-start">Sunday:</label><p>9am - 3pm</p>
           <label class="justify-self-start">Monday:</label><p>CLOSED</p>
@@ -35,16 +35,4 @@ export default {
 </script>
 
 <style scoped>
-  .footer {
-    font-family: "Libre Baskerville", serif;
-    background-color: #252525;
-
-    @apply justify-start mt-0 text-white text-xs md:text-base;
-
-  }
-
-  .footer > div {
-    @apply mx-4 md:mx-16;
-  }
-
 </style>

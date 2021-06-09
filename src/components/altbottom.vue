@@ -1,5 +1,5 @@
 <template>
-  <div class="footer flex flex-wrap justify-around">
+  <div class="footer flex flex-wrap justify-start">
       <div class="mt-8">
         <h2 class="text-2xl">Bakery Hours</h2>
         <div class="grid grid-cols-2 justify-items-end">
@@ -35,16 +35,4 @@ export default {
 </script>
 
 <style scoped>
-  .footer {
-    font-family: "Libre Baskerville", serif;
-    background-color: #252525;
-
-    @apply justify-start mt-0 md:mt-96 text-white text-xs md:text-base;
-
-  }
-
-  .footer > div {
-    @apply mx-4 md:mx-16;
-  }
-
 </style>
