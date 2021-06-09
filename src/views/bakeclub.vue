@@ -1,17 +1,19 @@
 <template>
-  <div>
+  <div class="table">
     <top background-image="url('https://i.imgur.com/GROUCq0.jpg')"/>
-    <div class="body">
-      <div class="flex">
-        <h2 class="text-5xl mt-4 mb-8">THE BAKE CLUB</h2>
+    <div class="middle row">
+      <div class="container cell">
+        <div class="flex">
+          <h2 class="text-5xl mt-4 mb-8">THE BAKE CLUB</h2>
+        </div>
+        <div class="flex mb-8">
+          <p>Join our bakers in an intimate hands-on setting to learn skills & techniques to make you a successful baker at home!</p>
+        </div>
+        <div class="flex inline-block mb-8">
+          <p>Small-size classes allow for one-on-one instruction. Plus, you get to take home what you bake! </p>
+        </div>
+        <h3 class="text-3xl flex">COMING SOON!</h3>
       </div>
-      <div class="flex mb-8">
-        <p>Join our bakers in an intimate hands-on setting to learn skills & techniques to make you a successful baker at home!</p>
-      </div>
-      <div class="flex inline-block mb-8">
-        <p>Small-size classes allow for one-on-one instruction. Plus, you get to take home what you bake! </p>
-      </div>
-      <h3 class="text-3xl flex">COMING SOON!</h3>
     </div>
     <bottom />
   </div>

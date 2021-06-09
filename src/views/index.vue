@@ -1,19 +1,20 @@
 <template>
-  <div class="main">
+  <div class="main table">
     <alttop />
-    <div class="body text-white">
+    <div class="middle row text-white">
+      <div class="container cell"></div>
     </div>
-    <altbottom />
+    <bottom />
   </div>
 </template>
 
 <script>
 import alttop from '../components/alttop.vue';
-import altbottom from '../components/altbottom.vue';
+import bottom from '../components/bottom.vue';
 
 export default {
   name: 'Home',
-  components: { alttop, altbottom },
+  components: { alttop, bottom },
 };
 </script>
 

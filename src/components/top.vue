@@ -1,7 +1,7 @@
 <template>
-  <div class="header sticky w-full text-2xl bg-black text-white tracking-widest" :style="style">
-    <div class="grid grid-rows-2 my-4 lg:my-0 ml-4 lg:mx-16">
-      <div>
+  <div class="top row text-2xl bg-black text-white tracking-widest" :style="style">
+    <div class="cell grid grid-rows-2 mx-4 md:mx-16">
+      <div class="mb-8">
           <router-link class="title" to="/">THE PANETTERIA</router-link>
       </div>
       <div class="flex flex-wrap">

@@ -1,8 +1,8 @@
 <template>
-  <div class="footer flex flex-wrap justify-start">
+  <div class="bottom row flex flex-wrap justify-start">
       <div class="mt-8">
         <h2 class="text-2xl">Bakery Hours</h2>
-        <div class="grid grid-cols-2">
+        <div class="flex flex-wrap md:grid md:grid-cols-2">
           <label class="justify-self-start">Tuesday - Saturday:</label><p>8am - 6pm</p>
           <label class="justify-self-start">Sunday:</label><p>9am - 3pm</p>
           <label class="justify-self-start">Monday:</label><p>CLOSED</p>
@@ -10,7 +10,7 @@
       </div>
       <div class="mt-8">
         <h2 class="text-2xl">Information</h2>
-        <div class="grid grid-cols-2">
+        <div class="flex flex-wrap md:grid md:grid-cols-2">
           <label>Email:</label><a href="mailto:info@thepanetteria.com">info@thepanetteria.com</a>
           <label>Phone:</label><a href="tel:555-555-5555">555-555-5555</a>
           <label>Socials:</label>
