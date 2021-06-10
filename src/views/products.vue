@@ -4,9 +4,12 @@
     <div class="middle row">
       <div class="container cell">
         <div class="flex">
-          <h2 class="text-5xl mt-4 mb-8">PRODUCTS</h2>
+          <h2 class="text-3xl md:text-5xl mt-4 mb-8">PRODUCTS</h2>
         </div>
-        <p class="mb-4">The following is a sample of The Panetteria’s staples. However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
+        <div class="mb-8">
+          <p class="mb-4">The following is a sample of The Panetteria’s staples.</p>
+          <p class="mr-4">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
+        </div>
         <div v-for="category in products.categories">
           <h3 class="text-4xl my-4">{{ category.category }}</h3>
           <div v-for="sub in category.subcategories">
