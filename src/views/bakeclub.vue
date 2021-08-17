@@ -2,9 +2,9 @@
   <div class="table">
     <top background-image="url('https://i.imgur.com/GROUCq0.jpg')"/>
     <div class="middle row">
-      <div class="container cell">
+      <div class="container cell w-11/12">
         <div class="flex">
-          <h2 class="text-5xl mt-4 mb-8">THE BAKE CLUB</h2>
+          <h2 class="text-4xl mt-4 mb-8">THE BAKE CLUB</h2>
         </div>
         <div class="flex mb-8">
           <p>Join our bakers in an intimate hands-on setting to learn skills & techniques to make you a successful baker at home!</p>

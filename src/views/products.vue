@@ -4,11 +4,11 @@
     <div class="middle row">
       <div class="container cell">
         <div class="flex">
-          <h2 class="text-3xl md:text-5xl mt-4 mb-8">PRODUCTS</h2>
+          <h2 class="text-4xl mt-4 mb-8">PRODUCTS</h2>
         </div>
         <div class="mb-8">
           <p class="mb-4">The following is a sample of The Panetteria’s staples.</p>
-          <p class="mr-4">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
+          <p class="w-11/12">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
         </div>
         <div v-for="category in products.categories">
           <h3 class="text-4xl my-4">{{ category.category }}</h3>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="mt-8">
-          <p>Please note:  All efforts are made to accommodate allergies.
+          <p class="w-11/12">Please note:  All efforts are made to accommodate allergies.
             However, given the size of our facility, we cannot guarantee
             that anything is 100% free of flour particles. For more information
             please contact us directly with your specific inquiries.</p>

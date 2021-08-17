@@ -2,7 +2,7 @@
 
 .top {
     font-family: 'Libre Baskerville', serif;
-    background-size: cover;
+    background-size: auto;
 
     @apply flex flex-wrap justify-end md:content-end;
 }
@@ -15,7 +15,6 @@
     @apply whitespace-nowrap w-full xl:w-auto xl:mr-16 xl:mb-8;
 }
 
-
 .middle {
     display: flex;
 
@@ -23,7 +22,7 @@
     font-family: 'Libre Baskerville', serif;
     color: #252525;
 
-    @apply h-full mx-4 md:mx-16 text-lg md:text-2xl;
+    @apply h-screen mx-4 md:mx-16 text-lg md:text-2xl;
 }
 
 .bottom {
@@ -46,6 +45,7 @@ html,
 body {min-height:100%; padding:0; margin:0;}
 
 #wrapper {
+    height: 100%;
     position:fixed;
     top:0; bottom:0; left:0; right:0;
     overflow-y: scroll;

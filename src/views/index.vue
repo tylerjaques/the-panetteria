@@ -1,8 +1,7 @@
 <template>
   <div class="main table">
     <alttop />
-    <div class="middle row text-white">
-      <div class="container cell"></div>
+    <div class="middle text-white">
     </div>
     <bottom />
   </div>

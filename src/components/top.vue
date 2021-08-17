@@ -1,5 +1,5 @@
 <template>
-  <div class="top row text-lg md:text-2xl bg-black text-white tracking-widest" :style="style">
+  <div class="top row text-lg md:text-2xl bg-black text-white tracking-widest" :style="bg">
     <div class="cell flex flex-wrap mx-4 md:mx-16 mt-8 mb-4 xl:mb-0">
       <div class="mb-4 w-full">
           <router-link class="title" to="/">THE PANETTERIA</router-link>
@@ -21,7 +21,7 @@ export default {
     'backgroundImage'
   ],
   computed: {
-    style() {
+    bg() {
         return 'background-image: ' + this.backgroundImage;
     }
   }

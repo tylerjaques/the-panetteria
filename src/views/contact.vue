@@ -2,12 +2,12 @@
   <div class="table">
     <top background-image="url('https://i.imgur.com/OpCVDF5.jpg')"/>
     <div class="middle row">
-      <div class="container cell">
+      <div class="container cell w-11/12">
         <div class="flex">
-          <h2 class="text-5xl mt-4 mb-8">CONTACT US</h2>
+          <h2 class="text-4xl mt-4 mb-8">CONTACT US</h2>
         </div>
         <div class="flex">
-          <div class="mb-4">
+          <div>
             <h2 class="text-3xl mb-4">Questions or Comments?</h2>
             <div class="col-span-6 sm:col-span-3">
               <label for="first_name" class="block">First name</label>
