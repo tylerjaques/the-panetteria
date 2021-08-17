@@ -1,5 +1,5 @@
 <template>
-  <div class="top text-lg md:text-2xl bg-black bg-opacity-50 text-white tracking-widest">
+  <div class="top row text-lg md:text-2xl bg-black bg-opacity-50 text-white tracking-widest">
     <div class="cell flex flex-wrap mx-4 md:mx-16 mt-8 mb-4 xl:mb-0">
       <div class="mb-4 w-full">
           <router-link class="title" to="/">THE PANETTERIA</router-link>

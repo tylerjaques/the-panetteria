@@ -2,6 +2,7 @@
   <div class="main table">
     <alttop />
     <div class="middle text-white">
+      <div class="container cell"></div>
     </div>
     <bottom />
   </div>

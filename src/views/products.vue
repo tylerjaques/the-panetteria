@@ -29,8 +29,8 @@
             please contact us directly with your specific inquiries.</p>
         </div>
       </div>
+      <button id="scrollToTop" @click="scrollToTop" :class="scrollToTopStyle" title="Go to top">Top</button>
     </div>
-    <button id="scrollToTop" @click="scrollToTop" :class="scrollToTopStyle" title="Go to top">Top</button>
     <bottom />
   </div>
 </template>
@@ -53,7 +53,7 @@ export default {
     }
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('scroll', this.handleScroll);
   },
   methods: {
     scrollToTop() {
@@ -61,6 +61,8 @@ export default {
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     },
     handleScroll() {
+      console.log(document.body.scrollTop);
+      console.log(document.documentElement.scrollTop);
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         this.scrollToTopStyle = "block";
       } else {
