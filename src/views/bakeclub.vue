@@ -1,6 +1,6 @@
 <template>
   <div class="table">
-    <top background-image="url('https://i.imgur.com/GROUCq0.jpg')"/>
+    <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell w-11/12">
         <div class="flex">
@@ -34,5 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+.bg-image {
+  background-image: url('../../public/images/AlmondCroissant.png');
+}
 </style>

@@ -1,13 +1,13 @@
 <template>
   <div class="table">
-    <top background-image="url('https://i.imgur.com/Q19KiR1.jpg')"/>
+    <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell">
         <div class="flex">
           <h2 class="page-header libre-baskerville">PRODUCTS</h2>
         </div>
         <div class="mb-8">
-          <p class="mb-4">The following is a sample of The Panetteria’s staples.</p>
+          <p class="mb-4 w-11/12">The following is a sample of The Panetteria’s staples.</p>
           <p class="w-11/12">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
         </div>
         <div v-for="category in products.categories">
@@ -87,5 +87,9 @@ export default {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     font-size: 1rem; /* Increase font size */
+  }
+
+  .bg-image {
+    background-image: url('../../public/images/AlmondCroissant.png');
   }
 </style>

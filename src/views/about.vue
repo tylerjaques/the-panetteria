@@ -1,6 +1,6 @@
 <template>
   <div class="table">
-    <top background-image="url('https://i.imgur.com/3IZXG4X.jpg')"/>
+    <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell w-11/12">
         <div class="flex">
@@ -58,5 +58,9 @@ export default {
 <style scoped lang="scss">
   .photo {
     @apply float-left w-1/3 md:w-1/12 mb-4 mr-4
+  }
+
+  .bg-image {
+    background-image: url('../../public/images/AlmondCroissant.png');
   }
 </style>

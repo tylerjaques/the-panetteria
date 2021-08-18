@@ -1,5 +1,5 @@
 <template>
-  <div class="main table">
+  <div class="bg-image bg-no-repeat bg-center bg-cover bg-fixed table">
     <alttop />
     <div class="middle text-white">
       <div class="container cell"></div>
@@ -20,12 +20,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  .main {
+  .bg-image {
     background-image: url('../../public/images/Sourdough.png');
-
-    font-family: "Libre Baskerville", serif;
-
-    @apply bg-center
   }
 
 </style>
