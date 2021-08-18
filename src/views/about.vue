@@ -4,7 +4,7 @@
     <div class="middle row">
       <div class="container cell w-11/12">
         <div class="flex">
-          <h2 class="text-4xl mt-4 mb-8">ABOUT US</h2>
+          <h2 class="page-header libre-baskerville">ABOUT US</h2>
         </div>
         <div class="flex flex-wrap">
         <div class="mb-8 text-base md:text-2xl">

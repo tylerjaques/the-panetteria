@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .top {
     font-family: 'Libre Baskerville', serif;
@@ -19,10 +20,11 @@
     display: flex;
 
     flex-direction: column;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', serif;
     color: #252525;
+    height: calc(100vh - 180px);
 
-    @apply h-screen mx-4 md:mx-16 text-lg md:text-2xl;
+    @apply mx-4 md:mx-16 text-lg md:text-2xl;
 }
 
 .bottom {
@@ -62,4 +64,16 @@ body {min-height:100%; padding:0; margin:0;}
 
 .container {
     @apply mx-4 md:mx-16;
+}
+
+.page-header {
+    @apply text-4xl mt-4 md:mt-16 mb-4 md:mb-8;
+}
+
+.libre-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', serif;
 }
