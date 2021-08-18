@@ -21,8 +21,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .main {
-    background-image: url('https://i.imgur.com/g5b2CbD.jpg');
+    background-image: url('../../public/images/Sourdough.png');
 
     font-family: "Libre Baskerville", serif;
+
+    @apply bg-center
   }
+
 </style>
