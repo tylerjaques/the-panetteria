@@ -5,12 +5,19 @@ import './assets/css/app.css';
 import './assets/css/tailwind.css';
 import Router from './router';
 
+// FontAwesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-Vue.use(VueRouter);
+library.add(faFacebook, faInstagram);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
+Vue.use(VueRouter);
 const router = Router.init(VueRouter);
+
 
 new Vue({
   router,

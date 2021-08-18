@@ -13,7 +13,7 @@
         <div class="flex flex-wrap md:grid md:grid-cols-2">
           <label>Email:</label><a href="mailto:info@thepanetteria.com">info@thepanetteria.com</a>
           <label>Phone:</label><a href="tel:555-555-5555">555-555-5555</a>
-          <label>Socials:</label>
+          <label>Socials:</label><font-awesome-icon icon="facebook" />
         </div>
       </div>
       <div class="my-8">
