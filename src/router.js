@@ -13,7 +13,7 @@ export default {
       },
       {
         path: '/bake-club',
-        name: 'back-club',
+        name: 'bake-club',
         component: () => import(/* webpackChunkName: "about" */ './views/bakeclub.vue'),
       },
       {

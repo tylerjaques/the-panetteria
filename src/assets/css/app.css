@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .top {
-    font-family: 'Libre Baskerville', serif;
     background-size: auto;
 
-    @apply flex flex-wrap justify-end md:content-end;
+    @apply flex flex-wrap justify-end md:content-end baskerville;
 }
 
 .top .title {
@@ -28,10 +28,9 @@
 }
 
 .bottom {
-    font-family: 'Libre Baskerville', serif;
     background-color: #252525;
 
-    @apply justify-start mt-0 text-white text-base md:text-lg;
+    @apply justify-start mt-0 text-white text-base md:text-lg baskerville;
 
 }
 
@@ -72,6 +71,10 @@ body {min-height:100%; padding:0; margin:0;}
 
 .libre-baskerville {
     font-family: 'Libre Baskerville', serif;
+}
+
+.baskerville {
+    font-family: 'Baskervville', serif;
 }
 
 .montserrat {

@@ -4,14 +4,14 @@
     <div class="middle row">
       <div class="container cell">
         <div class="flex">
-          <h2 class="page-header libre-baskerville">PRODUCTS</h2>
+          <h2 class="page-header baskerville">PRODUCTS</h2>
         </div>
         <div class="mb-8">
           <p class="mb-4 w-11/12">The following is a sample of The Panetteria’s staples.</p>
           <p class="w-11/12">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
         </div>
         <div v-for="category in products.categories">
-          <h3 class="text-4xl my-4 libre-baskerville">{{ category.category }}</h3>
+          <h3 class="text-4xl my-4 baskerville">{{ category.category }}</h3>
           <div v-for="sub in category.subcategories">
             <div class="text-3xl my-4">{{ sub.category }}</div>
             <div class="grid grid-cols-2 md:grid-cols-3">
