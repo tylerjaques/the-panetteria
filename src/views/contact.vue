@@ -29,7 +29,7 @@
               <label for="message" class="block">Message</label>
               <textarea v-model="message" name="message" id="message" class="mt-1 h-24 p-1 block w-full border border-black"></textarea>
             </div>
-            <button @click="sendEmail" class="p-1 border border-black">Send</button>
+            <button @click="sendEmail" class="p-1 border border-black mb-8">Send</button>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ export default {
     sendEmail() {
       let subject = `Contact Us: ${this.fullName}`;
       let body = `Full name: ${this.fullName}%0D%0AEmail: ${this.email}%0D%0APhone: ${this.phone}%0D%0AMessage: ${this.message}`;
-      window.open(`mailto:info@thepaneterria.ca?subject=${subject}&body=${body}`);
+      window.open(`mailto:info@thepaneterria.com?subject=${subject}&body=${body}`);
     }
   },
   computed: {
@@ -75,6 +75,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .bg-image {
-  background-image: url('../../public/images/AlmondCroissant.png');
+  background-image: url('/images/AlmondCroissant.png');
 }
 </style>

@@ -21,7 +21,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .bg-image {
-    background-image: url('../../public/images/Sourdough.png');
+    background-image: url('/images/bg-index.png');
   }
 
 </style>

@@ -90,6 +90,6 @@ export default {
   }
 
   .bg-image {
-    background-image: url('../../public/images/AlmondCroissant.png');
+    background-image: url('/images/head-products.png');
   }
 </style>

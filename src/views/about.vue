@@ -57,10 +57,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .photo {
-    @apply float-left w-1/3 md:w-1/12 mb-4 mr-4
+    @apply float-left w-1/3 md:w-1/12 mr-4
   }
 
   .bg-image {
-    background-image: url('../../public/images/AlmondCroissant.png');
+    background-image: url('/images/AlmondCroissant.png');
   }
 </style>

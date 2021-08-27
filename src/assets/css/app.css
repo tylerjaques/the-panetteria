@@ -9,11 +9,11 @@
 }
 
 .top .title {
-    @apply text-2xl md:text-3xl lg:text-5xl;
+    @apply text-2xl md:text-3xl lg:text-4xl;
 }
 
 .top .page {
-    @apply whitespace-nowrap w-full xl:w-auto xl:mr-16 xl:mb-8;
+    @apply whitespace-nowrap w-full xl:w-auto xl:mr-16 xl:mb-8 bg-black bg-opacity-25 border-double border-4 p-2;
 }
 
 .middle {
