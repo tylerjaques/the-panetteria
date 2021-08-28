@@ -1,10 +1,13 @@
 <template>
-  <div class="bg-image bg-no-repeat bg-center bg-cover bg-fixed table">
+  <div>
+    <div class="absolute bg-image bg-no-repeat bg-center bg-cover table">
     <alttop />
     <div class="middle text-white">
       <div class="container cell"></div>
     </div>
     <bottom />
+    </div>
+
   </div>
 </template>
 

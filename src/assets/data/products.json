@@ -5,44 +5,18 @@
       "category": "Breads",
       "subcategories": [
         {
-          "category": "Sourdoughs",
           "products": [
             {
-              "name": "Aburg Sourdough",
-              "photo": "./images/Bread1.jpg"
-            },
-            {
-              "name": "Lot 10 Loaf",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            },
-            {
-              "name": "Olive",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            },
-            {
-              "name": "Multi-Grain",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            },
-            {
-              "name": "Whole Wheat",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            }
-          ]
-        },
-        {
-          "category": "White",
-          "products": [
-            {
-              "name": "Baguette",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            },
-            {
-              "name": "White Country Loaf",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Sourdough",
+              "photo": "./images/Sourdough2.png"
             },
             {
               "name": "Focaccia",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "photo": "./images/Focaccia1.png"
+            },
+            {
+              "name": "Fendu",
+              "photo": "./images/Fendu.png"
             }
           ]
         }
@@ -52,44 +26,42 @@
       "category": "Pastry",
       "subcategories": [
         {
-          "category": "Sweet",
           "products": [
             {
               "name": "Almond Croissant",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            },
-            {
-              "name": "Chocolate Croissant",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "photo": "./images/AlmondCroissant.png"
             },
             {
               "name": "Danish",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "photo": "./images/Danish2.png"
             },
             {
-              "name": "Tart",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Raspberry Tart",
+              "photo": "./images/RaspberryTart2.png"
             },
             {
-              "name": "Scones",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            }
-          ]
-        },
-        {
-          "category": "Savoury",
-          "products": [
-            {
-              "name": "Individual Pies",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Almond Tart",
+              "photo": "./images/AlmondTart.png"
             },
             {
-              "name": "Sandwiches",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Chocolate Tart",
+              "photo": "./images/ChocolateTart.png"
             },
             {
-              "name": "Scones",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Lemon Tart",
+              "photo": "./images/LemonTart.png"
+            },
+            {
+              "name": "Pain au Chocolat",
+              "photo": "./images/PainauChocolat3.png"
+            },
+            {
+              "name": "Walnut Raisin",
+              "photo": "./images/WalnutRaisin2.png"
+            },
+            {
+              "name": "Chicken Pot Pie",
+              "photo": "./images/Pie3.png"
             }
           ]
         }
@@ -99,20 +71,9 @@
       "category": "Gelato/Sorbet",
       "subcategories": [
         {
-          "category": "Gelatos",
           "products": [
             {
-              "name": "Assorted Flavours (see in-store for availability",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
-            }
-          ]
-        },
-        {
-          "category": "Sorbets",
-          "products": [
-            {
-              "name": "Assorted Flavours (see in-store for availability",
-              "photo": "https://i.ibb.co/ZNF35v5/Bread1.jpg"
+              "name": "Assorted Flavours (see in-store for availability"
             }
           ]
         }

@@ -7,7 +7,7 @@
           <h2 class="page-header baskerville">ABOUT US</h2>
         </div>
         <div class="flex flex-wrap">
-        <div class="mb-8 text-base md:text-2xl">
+        <div class="mb-8 text-lg md:text-xl">
           <p>Located in the heart of downtown historic Amherstburg,
             The Panetteria is an artisan bakery specializing in
             bread and sweet & savoury pastries. Focus on quality,
@@ -16,7 +16,7 @@
             excellent ingredients with a seasonal approach
             to provide variety, flavour and quality.</p>
         </div>
-        <div class="mb-8 text-base md:text-2xl">
+        <div class="mb-8 text-lg md:text-xl">
           <img alt="Photo of Simon" class="photo" src="images/simon.jpg" />
           <p>Born and raised in Scotland, Simon Briggs graduated from the Stratford Chefs
             School in 2011 and has worked in various establishments in Stratford, Kitchener,
@@ -25,7 +25,7 @@
             years teaching both pastry and cookery, as well as at the London Training
             Centre for 2 years as a chef-instructor. In his free time, Simon is an avid gardener.</p>
         </div>
-        <div class="mb-8 text-base md:text-2xl">
+        <div class="mb-8 text-lg md:text-xl">
           <img alt="Photo of Anna" class="photo" src="images/anna.jpg" />
           <p>Anna Marano was born and raised in Amherstburg, Ontario. Also a graduate of the
             Stratford Chefs School in 2017, she has worked in fine dining and upscale bistros
@@ -61,6 +61,6 @@ export default {
   }
 
   .bg-image {
-    background-image: url('/images/AlmondCroissant.png');
+    background-image: url('/images/head-about.png');
   }
 </style>

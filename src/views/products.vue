@@ -10,17 +10,8 @@
           <p class="mb-4 w-11/12">The following is a sample of The Panetteria’s staples.</p>
           <p class="w-11/12">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
         </div>
-        <div v-for="category in products.categories">
-          <h3 class="text-4xl my-4 baskerville">{{ category.category }}</h3>
-          <div v-for="sub in category.subcategories">
-            <div class="text-3xl my-4">{{ sub.category }}</div>
-            <div class="grid grid-cols-2 md:grid-cols-3">
-              <div class="w-5/6 mb-4" v-for="product in sub.products">
-                <img :src="product.photo" :alt="product.name" />
-                <p>{{ product.name }}</p>
-              </div>
-            </div>
-          </div>
+        <div>
+        <product-list :products="products" />
         </div>
         <div class="mt-8">
           <p class="mb-16 w-11/12">Please note:  All efforts are made to accommodate allergies.
@@ -38,11 +29,12 @@
 <script>
 import top from '../components/top.vue';
 import bottom from '../components/bottom.vue';
+import productList from '../components/productList.vue'
 import products from '../assets/data/products.json';
 
 export default {
   name: 'Products',
-  components: { top, bottom },
+  components: { top, bottom, productList },
   props: {
     msg: String,
   },
