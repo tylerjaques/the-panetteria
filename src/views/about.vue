@@ -61,6 +61,6 @@ export default {
   }
 
   .bg-image {
-    background-image: url('/images/head-about.png');
+    background-image: url('../../public/images/head-about.png');
   }
 </style>
