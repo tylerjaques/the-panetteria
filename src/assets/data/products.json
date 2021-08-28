@@ -15,6 +15,10 @@
               "photo": "./images/Focaccia1.png"
             },
             {
+              "name": "Walnut Raisin",
+              "photo": "./images/WalnutRaisin2.png"
+            },
+            {
               "name": "Fendu",
               "photo": "./images/Fendu.png"
             }
@@ -54,10 +58,6 @@
             {
               "name": "Pain au Chocolat",
               "photo": "./images/PainauChocolat3.png"
-            },
-            {
-              "name": "Walnut Raisin",
-              "photo": "./images/WalnutRaisin2.png"
             },
             {
               "name": "Chicken Pot Pie",
