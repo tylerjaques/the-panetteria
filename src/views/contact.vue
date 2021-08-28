@@ -8,7 +8,7 @@
         </div>
         <div class="flex">
           <div>
-            <h2 class="text-3xl mb-4">Questions or Comments?</h2>
+            <h2 class="text-xl md:text-2xl mb-4">Questions or Comments?</h2>
             <div class="col-span-6 sm:col-span-3">
               <label for="first_name" class="block">First name</label>
               <input v-model="firstName" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 p-1 block w-full border border-black">
