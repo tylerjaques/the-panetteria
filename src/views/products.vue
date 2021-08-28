@@ -8,7 +8,7 @@
         </div>
         <div class="mb-8">
           <p class="mb-4 w-11/12">The following is a sample of The Panetteria’s staples.</p>
-          <p class="w-11/12">However, we encourage you to follow us on Instagram and Facebook for more up-to-date information regarding changing flavours and new products!</p>
+          <p class="w-11/12">However, we encourage you to follow us on <a href="https://www.instagram.com/the.panetteria">Instagram</a> and <a href="https://www.facebook.com/The.Panetteria/">Facebook</a> for more up-to-date information regarding changing flavours and new products!</p>
         </div>
         <div>
         <product-list :products="products" />
