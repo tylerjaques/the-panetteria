@@ -62,6 +62,12 @@ export default {
       let subject = `Contact Us: ${this.fullName}`;
       let body = `Full name: ${this.fullName}%0D%0AEmail: ${this.email}%0D%0APhone: ${this.phone}%0D%0AMessage: ${this.message}`;
       window.open(`mailto:info@thepaneterria.com?subject=${subject}&body=${body}`);
+
+      this.firstName = '';
+      this.lastName = '';
+      this.email = '';
+      this.phone = '';
+      this.message = '';
     }
   },
   computed: {
