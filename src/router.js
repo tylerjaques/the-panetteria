@@ -30,8 +30,6 @@ export default {
 
     return new VueRouter({
       routes: routes,
-      mode: 'history',
-      publicPath: '/'
     });
   },
 };
