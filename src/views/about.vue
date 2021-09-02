@@ -10,9 +10,9 @@
           <div class="mb-8 text-lg md:text-xl">
             <p>Located in the heart of downtown historic Amherstburg,
               The Panetteria is an artisan bakery specializing in
-              bread and sweet & savoury pastries. Focus on quality,
+              bread and sweet & savoury pastries. Focusing on quality,
               small-scale production is at the heart of what we do. We make
-              our breads and pastries by hand daily.  We focus on using
+              our breads and pastries by hand daily.  We pride ourselves on using
               excellent ingredients with a seasonal approach
               to provide variety, flavour and quality.</p>
           </div>
