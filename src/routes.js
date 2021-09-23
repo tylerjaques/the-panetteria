@@ -3,6 +3,15 @@ export const routes = [
       path: '/',
       name: 'index',
       component: () => import(/* webpackChunkName: "about" */ './views/index.vue'),
+      beforeEnter: (to, from, next) => {
+        if (sessionStorage.getItem('redirect') !== null) {
+          const redirect = sessionStorage.redirect
+          delete sessionStorage.redirect
+          next(redirect)
+        } else {
+          next()
+        }
+      },
     },
     {
       path: '/about',
