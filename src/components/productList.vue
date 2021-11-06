@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      isModalVisible: true,
+      isModalVisible: false,
       modalPhoto: '',
       modalCaption: '',
     }
@@ -52,7 +52,7 @@ export default {
 <style scoped>
   img:hover {
     cursor: pointer;
-    opacity: 50%;
+    opacity: 80%;
   }
 </style>
 
