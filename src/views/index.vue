@@ -34,7 +34,7 @@ export default {
 
     @media (min-width: 801px) {
       .bg-image {
-        background-image: url('../../public/images/front2.jpg');
+        background-image: url('../../public/images/front6.jpg');
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
