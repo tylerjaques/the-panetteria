@@ -52,7 +52,6 @@ export default {
 <style scoped>
   img:hover {
     cursor: pointer;
-    opacity: 80%;
   }
 </style>
 
