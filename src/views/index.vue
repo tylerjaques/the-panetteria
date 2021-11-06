@@ -44,6 +44,7 @@ export default {
         height: 100vh;
         width: 100vw;
         background-size: cover;
+        overflow-y: scroll;
       }
     }
 </style>
