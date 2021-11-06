@@ -3,9 +3,7 @@
     <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell w-11/12">
-        <div class="flex">
-          <h2 class="page-header baskerville">THE BAKE CLUB</h2>
-        </div>
+        <h2 class="page-header libre-baskerville tracking-widest">THE BAKE CLUB</h2>
         <div class="flex mb-8">
           <p>Join our bakers in an intimate hands-on setting to learn skills & techniques to make you a successful baker at home!</p>
         </div>

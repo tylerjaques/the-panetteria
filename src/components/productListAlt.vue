@@ -18,7 +18,7 @@
 <script>
 
 export default {
-  name: 'Top',
+  name: 'ProductList',
   props: {
     products: Array
   }
