@@ -3,7 +3,7 @@
     <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell w-11/12">
-        <h2 class="page-header baskerville">ABOUT US</h2>
+        <h2 class="page-header libre-baskerville tracking-widest">ABOUT US</h2>
         <div class="flex flex-wrap">
           <div class="mb-8 text-lg md:text-xl">
             <p>Located in the heart of downtown historic Amherstburg,
