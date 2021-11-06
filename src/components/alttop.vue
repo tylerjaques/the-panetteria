@@ -1,5 +1,5 @@
 <template>
-  <div class="top row text-lg md:text-2xl bg-black bg-opacity-50 text-white tracking-wide">
+  <div class="top row text-lg md:text-2xl bg-black bg-opacity-50 text-white tracking-widest">
     <div class="cell flex flex-wrap mt-4 md:mt-8 xl:mb-0">
       <div class="mx-4 md:mx-16 mb-4 md:mb-8 w-full">
         <router-link class="title" to="/"><img src="images/Logo.jpg" alt="The Panetteria"></router-link>
