@@ -22,7 +22,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  .bg-image {
-    background-image: url('../../public/images/bg-index.png');
-  }
+    @media (max-width: 800px) {
+      .bg-image {
+        background-image: url('../../public/images/front1.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: 801px) {
+      .bg-image {
+        background-image: url('../../public/images/front2.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    }
 </style>

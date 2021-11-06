@@ -5,7 +5,7 @@
       <div v-for="sub in category.subcategories">
         <div class="grid grid-cols-2 lg:grid-cols-4">
           <div class="w-5/6 mb-4" v-for="product in sub.products">
-            <img v-if="product.photo" :src="product.photo" :alt="product.name" />
+            <img class="" v-if="product.photo" :src="product.photo" :alt="product.name" />
             <p v-else>{{ product.name }}</p>
           </div>
         </div>
@@ -17,7 +17,7 @@
 <script>
 
 export default {
-  name: 'Top',
+  name: 'ProductList',
   props: {
     products: Object
   }
@@ -26,3 +26,4 @@ export default {
 
 <style scoped>
 </style>
+
