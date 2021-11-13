@@ -61,7 +61,7 @@ export default {
     sendEmail() {
       let subject = `Contact Us: ${this.fullName}`;
       let body = `Full name: ${this.fullName}%0D%0AEmail: ${this.email}%0D%0APhone: ${this.phone}%0D%0AMessage: ${this.message}`;
-      window.open(`mailto:info@thepanetteria.com?subject=${subject}&body=${body}`);
+      window.open(`mailto:thepanetteria@gmail.com?subject=${subject}&body=${body}`);
 
       this.firstName = '';
       this.lastName = '';

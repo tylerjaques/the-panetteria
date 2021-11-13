@@ -12,7 +12,7 @@
       <div class="mt-8">
         <h2 class="text-2xl">Information</h2>
         <div class="flex flex-wrap md:grid md:grid-cols-2">
-          <label>Email:</label><a href="mailto:info@thepanetteria.com">info@thepanetteria.com</a>
+          <label>Email:</label><a href="mailto:thepanetteria@gmail.com">thepanetteria@gmail.com</a>
           <label>Phone:</label><a href="tel:519-730-1801">519-730-1801</a>
           <label>Socials:</label><p><a href="https://www.facebook.com/The.Panetteria/"><font-awesome-icon :icon="['fab', 'facebook']" /></a> <a href="https://www.instagram.com/the.panetteria"><font-awesome-icon :icon="['fab', 'instagram']" /></a></p>
         </div>
