@@ -2,16 +2,14 @@
   <div class="table">
     <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
-      <div class="container cell">
-        <div class="flex">
-          <h2 class="page-header baskerville">PRODUCTS</h2>
-        </div>
+      <div class="container cell pr-8">
+        <h2 class="page-header libre-baskerville tracking-widest">PRODUCTS</h2>
         <div class="mb-8">
           <p class="mb-4 w-11/12">The following is a sample of The Panetteria’s staples.</p>
           <p class="w-11/12">However, we encourage you to follow us on <a href="https://www.instagram.com/the.panetteria">Instagram</a> and <a href="https://www.facebook.com/The.Panetteria/">Facebook</a> for more up-to-date information regarding changing flavours and new products!</p>
         </div>
         <div>
-        <product-list :products="products" />
+          <product-list :products="products"/>
         </div>
         <div class="mt-8">
           <p class="mb-16 w-11/12">Please note:  All efforts are made to accommodate allergies.

@@ -3,9 +3,7 @@
     <top class="bg-image bg-no-repeat bg-top"/>
     <div class="middle row">
       <div class="container cell w-11/12">
-        <div class="flex">
-          <h2 class="page-header baskerville">CONTACT US</h2>
-        </div>
+        <h2 class="page-header libre-baskerville tracking-widest">CONTACT US</h2>
         <div class="flex">
           <div>
             <h2 class="text-xl md:text-2xl mb-4">Questions or Comments?</h2>
