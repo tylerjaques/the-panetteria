@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <div id="wrapper">
+      <banner v-if="showBanner && bannerActive" @close="showBanner = false">
+        We will be on vacation until Wednesday Jan 19 at 9am!
+      </banner>
       <router-view/>
     </div>
   </div>
@@ -15,3 +18,23 @@
     overflow-x: hidden;
   }
 </style>
+<script>
+
+import Banner from '@/components/banner';
+export default {
+  components: { Banner },
+  data() {
+    return {
+      showBanner: true
+    }
+  },
+  computed: {
+    bannerActive() {
+      const startDate = new Date('01/01/2022');
+      const endDate = new Date('01/19/2022');
+
+      return (Date.now() >= startDate && Date.now() <= endDate);
+    }
+  }
+};
+</script>

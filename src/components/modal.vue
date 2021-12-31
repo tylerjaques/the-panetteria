@@ -1,7 +1,7 @@
 <template>
     <div class="modal">
       <span @click="$emit('close')" class="close">&times;</span>
-      <img :src="url" :alt="caption" class="modal-content">
+      <img @click="$emit('close')" :src="url" :alt="caption" class="modal-content">
       <div id="caption">{{ caption }}</div>
     </div>
 </template>

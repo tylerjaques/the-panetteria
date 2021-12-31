@@ -68,3 +68,11 @@ body {min-height:100%; padding:0; margin:0;}
 .montserrat {
     font-family: 'Montserrat', sans-serif;
 }
+
+.text-primary {
+    color: #00B9CE;
+}
+
+.bg-primary {
+    background-color: #00B9CE;
+}
