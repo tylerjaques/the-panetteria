@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <banner v-if="showBanner && bannerActive" @close="showBanner = false">
-        We will be on vacation until Wednesday Jan 19 at 9am!
+        We'll be <strong>shut down</strong> for what we're calling our <strong>"Baker's Wedding Break"</strong> <br> <strong>Starting Monday April 25th and returning Wednesday May 18th</strong>!
       </banner>
       <router-view/>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   computed: {
     bannerActive() {
-      const startDate = new Date('01/01/2022');
-      const endDate = new Date('01/19/2022');
+      const startDate = new Date('04/25/2022');
+      const endDate = new Date('05/18/2022');
 
       return (Date.now() >= startDate && Date.now() <= endDate);
     }

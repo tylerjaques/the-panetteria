@@ -5,7 +5,7 @@
       id="messageModal"
       @click="$emit('close')"
     >
-      <div class="text-xl font-semibold">
+      <div class="text-lg font-semibold">
           <slot></slot>
       </div>
 
