@@ -3,8 +3,10 @@
       <div class="mt-8">
         <h2 class="text-2xl">Bakery Hours</h2>
         <div class="flex flex-wrap md:grid md:grid-cols-2">
-          <label class="justify-self-start">Tuesday - Sunday:</label><p>9am - 4pm</p>
-          <label class="justify-self-start">Monday</label><p>CLOSED</p>
+          <label class="justify-self-start">Monday & Tuesday:</label><p>Closed</p>
+          <label class="justify-self-start">Wednesday & Thursday:</label><p>9am - 3pm</p>
+          <label class="justify-self-start">Friday & Saturday:</label><p>9am - 4pm</p>
+          <label class="justify-self-start">Sunday</label><p>9am - 3pm</p>
         </div>
       </div>
       <div class="mt-8">
