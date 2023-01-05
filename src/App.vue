@@ -30,8 +30,8 @@ export default {
   },
   computed: {
     bannerActive() {
-      const startDate = new Date('01/01/2022');
-      const endDate = new Date('01/25/2022');
+      const startDate = new Date('01/01/2023');
+      const endDate = new Date('01/25/2023');
 
       return (Date.now() >= startDate && Date.now() <= endDate);
     }
