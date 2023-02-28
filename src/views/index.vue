@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="bg">
+      <div class="absolute table">
         <alttop/>
         <div class="middle text-white">
           <div class="container cell"></div>
         </div>
         <bottom/>
       </div>
+    </div>
   </div>
 </template>
 
