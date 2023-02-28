@@ -13,6 +13,9 @@
               our breads and pastries by hand daily.  We pride ourselves on using
               excellent ingredients to give you variety, flavour and quality.</p>
           </div>
+          <div class="flex justify-center mb-8">
+            <img class="lg:w-3/4" alt="Photo of desserts, salts, jams and coffee" src="images/inside1.jpg" />
+          </div>
         </div>
       </div>
     </div>

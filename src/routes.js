@@ -20,9 +20,9 @@ export const routes = [
       component: () => import(/* webpackChunkName: "about" */ './views/contact.vue'),
     },
     {
-      path: '/products',
-      name: 'products',
-      component: () => import(/* webpackChunkName: "about" */ './views/products.vue'),
+      path: '/menu',
+      name: 'menu',
+      component: () => import(/* webpackChunkName: "about" */ './views/menu.vue'),
     },
 ];
 

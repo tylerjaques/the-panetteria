@@ -17,9 +17,9 @@
             which may take up to 3 hours) and note that seating is not available during the classes.
             Cleasses are posted on social media and are first come first serve by email only.</p>
         </div>
-        <div class="flex inline-block mb-8">
+        <div class="inline-block mb-8">
           <p>Classes that are currently offered include:</p>
-          <ul>
+          <ul class="list-disc list-inside ml-4">
             <li>French Tarts</li>
             <li>Introduction to Bread</li>
             <li>Thin-Crust Pizza</li>

@@ -1,3 +1,62 @@
 ﻿{
-
+  "menu": {
+    "title": "Menu",
+    "sections": [
+      {
+        "name": "Breads",
+        "items": [
+          "Classic Sourdough",
+          "Multigrain Sourdough",
+          "Focaccia",
+          "Baguette",
+          "Country White Loaf",
+          "Olive Sourdough (weekends)",
+          "Rye Sourdough (weekends)",
+          "Walnut-Raisin Sourdough (weekends)"
+        ]
+      },
+      {
+        "name": "Pastries",
+        "items": [
+          "Croissant",
+          "Danish",
+          "Pain au Chocolat",
+          "Cookies",
+          "Bars/Brownies",
+          "Cinnamon Buns",
+          "& More!"
+        ]
+      },
+      {
+        "name": "Lunch",
+        "items": [
+          "Sandwiches",
+          "Quiche",
+          "Pizza"
+        ]
+      }
+    ]
+  },
+  "products" : [
+    "AlmondCroissant.png",
+    "AlmondTart.png",
+    "ChocolateTart.png",
+    "Croissant3.png",
+    "Danish2.png",
+    "frenchbread-wall.jpg",
+    "meatpie.jpg",
+    "PainauChocolat3.png",
+    "peach-tart.jpg",
+    "Pie3.png",
+    "RaspberryTart2.png",
+    "row-of-croissants.jpg",
+    "sourdough-sunny.jpg",
+    "sourdough-window.jpg",
+    "Sourdough2.png",
+    "strawberry-tart.jpg",
+    "TomatoTart.png",
+    "WalnutRaisin2.png",
+    "wholewheat-sourdough.jpg"
+  ]
 }
+
