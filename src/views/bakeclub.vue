@@ -21,7 +21,6 @@
           <p>Classes that are currently offered include:</p>
           <ul class="list-disc list-inside ml-4">
             <li>French Tarts</li>
-            <li>Introduction to Bread</li>
             <li>Thin-Crust Pizza</li>
             <li>Classic Pies</li>
             <li>Scones & Muffins</li>
