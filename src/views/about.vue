@@ -11,27 +11,10 @@
               bread and sweet & savoury pastries. Focusing on quality,
               small-scale production is at the heart of what we do. We make
               our breads and pastries by hand daily.  We pride ourselves on using
-              excellent ingredients with a seasonal approach
-              to provide variety, flavour and quality.</p>
+              excellent ingredients to give you variety, flavour and quality.</p>
           </div>
           <div class="flex justify-center mb-8">
-            <img alt="Simon and Anna" class="w-1/2 md:w-1/4 lg:w-1/5  mr-8" src="images/simonanna.jpg" />
-          </div>
-          <div class="mb-8 text-lg md:text-xl">
-            <p>Born and raised in Scotland, Simon Briggs graduated from the Stratford Chefs
-              School in 2011 and has worked in various establishments in Stratford, Kitchener,
-              and London. His style of food is steeped in traditional French technique.
-              Simon was previously an instructor with the Stratford Chefs School for 7
-              years teaching both pastry and cookery, as well as at the London Training
-              Centre for 2 years as a chef-instructor. In his free time, Simon is an avid gardener.</p>
-            <br />
-
-            <p>Anna Marano was born and raised in Amherstburg, Ontario. Also a graduate of the
-              Stratford Chefs School in 2017, she has worked in fine dining and upscale bistros
-              in Stratford. She has also spent time working as a teaching assistant and
-              chef-instructor to a variety of age groups. Anna is inspired by classical
-              French and rustic Italian cuisines. After spending some time away, she is
-              thrilled to be back in her hometown sharing what she loves with her community.</p>
+            <img class="lg:w-3/4" alt="Photo of desserts, salts, jams and coffee" src="images/inside1.jpg" />
           </div>
         </div>
       </div>

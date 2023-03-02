@@ -11,16 +11,8 @@
               "photo": "./images/Sourdough2.png"
             },
             {
-              "name": "Focaccia",
-              "photo": "./images/Focaccia1.png"
-            },
-            {
               "name": "Walnut Raisin",
               "photo": "./images/WalnutRaisin2.png"
-            },
-            {
-              "name": "Fendu",
-              "photo": "./images/Fendu.png"
             }
           ]
         }
@@ -50,10 +42,6 @@
             {
               "name": "Chocolate Tart",
               "photo": "./images/ChocolateTart.png"
-            },
-            {
-              "name": "Lemon Tart",
-              "photo": "./images/LemonTart.png"
             },
             {
               "name": "Pain au Chocolat",

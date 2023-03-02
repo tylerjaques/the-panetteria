@@ -5,10 +5,10 @@
             <router-link class="title" to="/"><img src="images/Logo.jpg" alt="The Panetteria"></router-link>
         </div>
         <div class="flex flex-wrap px-4 md:px-16 pb-2 bg-black bg-opacity-75 w-full tracking-widest">
-          <router-link class="page" to="/products">PRODUCTS</router-link>
+          <router-link class="page" to="/menu">MENU</router-link>
+          <router-link class="page" to="/bake-club">THE BAKE CLUB</router-link>
           <router-link class="page" to="/about">ABOUT US</router-link>
           <router-link class="page" to="/contact">CONTACT US</router-link>
-          <router-link class="page" to="/bake-club">THE BAKE CLUB</router-link>
         </div>
       </div>
   </div>
@@ -27,6 +27,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-</style>
