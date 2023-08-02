@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <banner v-if="showBanner && bannerActive" @close="showBanner = false">
-        We're going to be closed for summer holidays <br> <strong>starting August 6th and returning August 16th</strong>!
+        Closed August 6-15 for summer holidays | Re-Opening August 16th @ 9am!
       </banner>
       <router-view/>
     </div>
