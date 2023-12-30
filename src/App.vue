@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <banner v-if="showBanner && bannerActive" @close="showBanner = false">
-        Closed August 6-15 for summer holidays | Re-Opening August 16th @ 9am!
+        We will be closed from January 1st to January 23rd and re-opening on January 24th, for our annual winter break.
       </banner>
       <router-view/>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   computed: {
     bannerActive() {
-      const startDate = new Date('08/01/2023');
-      const endDate = new Date('08/16/2023');
+      const startDate = new Date('12/30/2023');
+      const endDate = new Date('01/23/2023');
 
       return (Date.now() >= startDate && Date.now() <= endDate);
     }
