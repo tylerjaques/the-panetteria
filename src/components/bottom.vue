@@ -10,8 +10,8 @@
             <label class="justify-self-start">Saturday:</label><p>9am - 4pm</p>
             <label class="justify-self-start">Sunday</label><p>9am - 3pm</p>
         </div>
-        <h2 class="text-2xl mt-8">Holiday Hours</h2>
-        <div class="flex flex-wrap md:grid md:grid-cols-2">
+        <h2 v-if="holidayFooterActive" class="text-2xl mt-8">Holiday Hours</h2>
+        <div v-if="holidayFooterActive" class="flex flex-wrap md:grid md:grid-cols-2 mb-8">
             <label class="justify-self-start">Christmas Eve - Pickups Only:</label><p>Closed</p>
             <label class="justify-self-start">December 25th - 27th:</label><p>Closed</p>
             <label class="justify-self-start">December 28th:</label><p>9am - 4pm</p>
@@ -42,6 +42,14 @@
 <script>
 export default {
   name: 'Footer',
+    computed:{
+        holidayFooterActive() {
+            const startDate = new Date('12/12/2024');
+            const endDate = new Date('01/23/2025');
+
+            return (Date.now() >= startDate && Date.now() <= endDate);
+        }
+    }
 };
 </script>
 
