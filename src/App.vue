@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <banner v-if="showBanner && bannerActive" @close="showBanner = false">
-        We will be closed from January 1st to January 23rd and re-opening on January 24th, for our annual winter break.
+          We’ll be closed for our annual winter break from January 1st to January 22nd and will be reopening on January 23rd.
       </banner>
       <router-view/>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   computed: {
     bannerActive() {
-      const startDate = new Date('12/29/2023');
-      const endDate = new Date('01/23/2024');
+      const startDate = new Date('12/29/2024');
+      const endDate = new Date('01/23/2025');
 
       return (Date.now() >= startDate && Date.now() <= endDate);
     }
