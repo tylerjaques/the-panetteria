@@ -2,7 +2,7 @@
   <div id="app">
     <div id="wrapper">
       <banner v-if="showBanner && bannerActive" @close="showBanner = false">
-          We’ll be closed for our annual semi-annual vacation from September 7th to September 17th. We'll be open September 18th!
+          We’ll be closed for our holiday break from January 1st to January 21st. We'll be back open on January 22nd!
       </banner>
       <router-view/>
     </div>
@@ -30,8 +30,8 @@ export default {
   },
   computed: {
     bannerActive() {
-      const startDate = new Date('09/07/2025');
-      const endDate = new Date('09/17/2025');
+      const startDate = new Date('12/26/2025');
+      const endDate = new Date('01/21/2026');
 
       return (Date.now() >= startDate && Date.now() <= endDate);
     }
