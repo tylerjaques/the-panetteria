@@ -6,7 +6,7 @@
 set -e
 
 BUDGET_AMOUNT="${1:-50}"
-EMAIL="${2}"
+EMAIL="${2:-tjaques1@gmail.com}"
 
 if [ -z "$EMAIL" ]; then
   echo "Usage: $0 MONTHLY_BUDGET_USD EMAIL"

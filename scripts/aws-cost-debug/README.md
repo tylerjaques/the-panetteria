@@ -2,6 +2,8 @@
 
 Scripts and checklist for investigating Amplify + WAF cost drivers and implementing mitigations.
 
+**See also:** [docs/COST_REDUCTION_ACTIONS.md](../../docs/COST_REDUCTION_ACTIONS.md) for findings and step-by-step cost reduction actions.
+
 ## Prerequisites
 
 - AWS CLI configured with `aws configure`
