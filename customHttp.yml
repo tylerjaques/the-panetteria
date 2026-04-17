@@ -1,0 +1,22 @@
+# Amplify custom HTTP headers for CloudFront caching
+# https://docs.aws.amazon.com/amplify/latest/userguide/custom-headers.html
+#
+# index.html: short cache so SPA updates propagate quickly
+# JS/CSS: long cache (content-hashed filenames change on deploy)
+customHeaders:
+  - pattern: '**/*.js'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=31536000, immutable'
+  - pattern: '**/*.css'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=31536000, immutable'
+  - pattern: '**/*.html'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=0, must-revalidate'
+  - pattern: '/'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=0, must-revalidate'
