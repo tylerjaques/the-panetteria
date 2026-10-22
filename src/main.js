@@ -1,7 +1,6 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import { createApp } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';
-import './assets/css/app.css';
 import './assets/css/tailwind.css';
 import { routes } from './routes.js';
 
@@ -11,18 +10,13 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faFacebook, faInstagram);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
 
-Vue.config.productionTip = false;
-
-Vue.use(Router);
-const router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount('#app');
+createApp(App)
+  .component('font-awesome-icon', FontAwesomeIcon)
+  .use(router)
+  .mount('#app');

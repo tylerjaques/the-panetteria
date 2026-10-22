@@ -36,49 +36,38 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed } from 'vue';
 import top from '../components/top.vue';
 import bottom from '../components/bottom.vue';
 
-export default {
-  name: 'Contact',
-  components: { top, bottom },
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: '',
-    }
-  },
-  methods: {
-    sendEmail() {
-      let subject = `Contact Us: ${this.fullName}`;
-      let body = `Full name: ${this.fullName}%0D%0AEmail: ${this.email}%0D%0APhone: ${this.phone}%0D%0AMessage: ${this.message}`;
-      window.open(`mailto:thepanetteria@gmail.com?subject=${subject}&body=${body}`);
+const firstName = ref('');
+const lastName = ref('');
+const email = ref('');
+const phone = ref('');
+const message = ref('');
 
-      this.firstName = '';
-      this.lastName = '';
-      this.email = '';
-      this.phone = '';
-      this.message = '';
-    }
-  },
-  computed: {
-    fullName() {
-      return this.firstName + ' ' + this.lastName;
-    }
-  }
-};
+const fullName = computed(() => `${firstName.value} ${lastName.value}`.trim());
+
+function sendEmail() {
+  const subject = `Contact Us: ${fullName.value}`;
+  const body = `Full name: ${fullName.value}
+Email: ${email.value}
+Phone: ${phone.value}
+Message: ${message.value}`;
+  window.location.href = `mailto:thepanetteria@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  firstName.value = '';
+  lastName.value = '';
+  email.value = '';
+  phone.value = '';
+  message.value = '';
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .bg-image {
-  background-image: url('../../public/images/head-contact.png');
+  background-image: url('/images/head-contact.png');
 }
 </style>

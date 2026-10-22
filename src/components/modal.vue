@@ -6,14 +6,12 @@
     </div>
 </template>
 
-<script>
-export default {
-  name: 'Modal',
-  props: {
-    url: String,
-    caption: String
-  }
-};
+<script setup>
+defineProps({
+  url: String,
+  caption: String,
+});
+defineEmits(['close']);
 </script>
 
 <style scoped>
