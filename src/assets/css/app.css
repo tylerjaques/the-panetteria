@@ -31,7 +31,7 @@ html:has(dialog[open]) {
 }
 
 .nav {
-    @apply flex flex-wrap gap-x-6 md:gap-x-12 gap-y-1 px-4 md:px-16 py-2 bg-black/75 xl:justify-end libre-baskerville uppercase;
+    @apply flex flex-wrap gap-x-6 md:gap-x-12 gap-y-1 px-4 md:px-16 py-2 bg-black/75 libre-baskerville uppercase;
 }
 
 .nav-link {
