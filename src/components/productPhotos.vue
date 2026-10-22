@@ -1,39 +1,32 @@
 <template>
   <div id="products" v-if="products">
-      <div v-for="product in products" class="my-4 mx-2">
-        <img :src="'images/' + product" :alt="product" @click="openModal('images/' + product)"/>
+      <div v-for="product in products" :key="product" class="my-4 mx-2">
+        <img :src="'/images/' + product" :alt="product" @click="openModal('/images/' + product)"/>
       </div>
     <modal v-if="isModalVisible" :url="modalPhoto" @close="closeModal()"/>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+import Modal from '@/components/modal.vue';
 
-import Modal from "@/components/modal.vue";
+defineProps({
+  products: Array,
+});
 
-export default {
-  name: 'ProductPhotos',
-  components: { Modal },
-  props: {
-    products: Array
-  },
-  data() {
-    return {
-      isModalVisible: false,
-      modalPhoto: '',
-    }
-  },
-  methods: {
-    openModal(photo, name) {
-      this.isModalVisible = true;
-      this.modalPhoto = photo;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-      this.modalPhoto = '';
-    }
-  }
-};
+const isModalVisible = ref(false);
+const modalPhoto = ref('');
+
+function openModal(photo) {
+  isModalVisible.value = true;
+  modalPhoto.value = photo;
+}
+
+function closeModal() {
+  isModalVisible.value = false;
+  modalPhoto.value = '';
+}
 </script>
 
 <style>

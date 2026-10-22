@@ -27,39 +27,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import top from '../components/top.vue';
 import bottom from '../components/bottom.vue';
-import productMenu from "@/components/productMenu.vue";
-// import productList from '../components/productList.vue'
-import productPhotos from "@/components/productPhotos.vue";
-import products from '../assets/data/products.json';
+import productMenu from '@/components/productMenu.vue';
+import productPhotos from '@/components/productPhotos.vue';
 import config from '../assets/data/config.json';
-import ProductMenu from "../components/productMenu.vue";
 
-
-export default {
-  name: 'Products',
-  computed: {
-    ProductMenu() {
-      return ProductMenu
-    }
-  },
-  components: {top, bottom, productMenu, productPhotos},
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      products: config.products,
-      menu: config.menu,
-    }
-  },
-};
+const { products, menu } = config;
 </script>
 
 <style scoped lang="scss">
 .bg-image {
-  background-image: url('../../public/images/head-products.png');
+  background-image: url('/images/head-products.png');
 }
 </style>

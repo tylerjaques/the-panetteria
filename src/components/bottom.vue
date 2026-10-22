@@ -39,18 +39,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Footer',
-    computed:{
-        holidayFooterActive() {
-            const startDate = new Date('12/12/2024');
-            const endDate = new Date('01/23/2025');
-
-            return (Date.now() >= startDate && Date.now() <= endDate);
-        }
-    }
-};
+<script setup>
+const startDate = new Date('12/12/2024');
+const endDate = new Date('01/23/2025');
+const holidayFooterActive = Date.now() >= startDate && Date.now() <= endDate;
 </script>
 
 <style scoped>

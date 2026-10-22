@@ -18,14 +18,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Banner',
-  props: {
-    url: String,
-    caption: String
-  }
-};
+<script setup>
+defineEmits(['close']);
 </script>
 
 <style scoped>

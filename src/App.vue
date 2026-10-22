@@ -18,23 +18,13 @@
     overflow-x: hidden;
   }
 </style>
-<script>
+<script setup>
+import { ref } from 'vue';
+import Banner from '@/components/banner.vue';
 
-import Banner from '@/components/banner';
-export default {
-  components: { Banner },
-  data() {
-    return {
-      showBanner: true
-    }
-  },
-  computed: {
-    bannerActive() {
-      const startDate = new Date('12/26/2025');
-      const endDate = new Date('01/21/2026');
+const showBanner = ref(true);
 
-      return (Date.now() >= startDate && Date.now() <= endDate);
-    }
-  }
-};
+const startDate = new Date('12/26/2025');
+const endDate = new Date('01/21/2026');
+const bannerActive = Date.now() >= startDate && Date.now() <= endDate;
 </script>
