@@ -14,7 +14,7 @@
               excellent ingredients to give you variety, flavour and quality.</p>
           </div>
           <div class="flex justify-center mb-8">
-            <img class="lg:w-3/4" alt="Photo of desserts, salts, jams and coffee" src="images/inside1.jpg" />
+            <img class="lg:w-3/4" alt="Photo of desserts, salts, jams and coffee" src="/images/inside1.jpg" />
           </div>
         </div>
       </div>
@@ -23,22 +23,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import top from '../components/top.vue';
 import bottom from '../components/bottom.vue';
-
-export default {
-  name: 'About',
-  components: { top, bottom },
-  props: {
-    msg: String,
-  },
-};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .bg-image {
-    background-image: url('../../public/images/head-about.png');
+    background-image: url('/images/head-about.png');
   }
 </style>
