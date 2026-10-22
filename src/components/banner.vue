@@ -1,26 +1,17 @@
 <template>
-  <div>
-    <div
-      class="text-center flex flex-col p-4 md:text-left md:flex-row md:items-center md:justify-between md:p-4 bg-primary cursor-pointer"
-      id="messageModal"
-      @click="$emit('close')"
-    >
-      <div class="text-lg font-semibold">
-          <slot></slot>
-      </div>
-
-      <div class="mt-3 md:mt-0 md:ml-2">
-        <button class="text-lg font-semibold">
-          <span>x</span>
-        </button>
-      </div>
-    </div>
-  </div>
+  <aside
+    class="flex items-start justify-between gap-4 p-4 bg-primary text-black montserrat"
+    aria-label="Announcement"
+  >
+    <p class="text-lg font-semibold">
+      <slot></slot>
+    </p>
+    <button type="button" class="shrink-0 px-2 text-2xl leading-none cursor-pointer" aria-label="Dismiss" @click="$emit('close')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </aside>
 </template>
 
 <script setup>
 defineEmits(['close']);
 </script>
-
-<style scoped>
-</style>

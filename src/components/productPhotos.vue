@@ -1,9 +1,21 @@
 <template>
-  <div id="products" v-if="products">
-      <div v-for="product in products" :key="product" class="my-4 mx-2">
-        <img :src="'/images/' + product" :alt="product" @click="openModal('/images/' + product)"/>
-      </div>
-    <modal v-if="isModalVisible" :url="modalPhoto" @close="closeModal()"/>
+  <div v-if="products">
+    <ul class="columns-1 min-[400px]:columns-2 md:columns-3 lg:columns-4 gap-0" aria-label="Product photos">
+      <li v-for="product in products" :key="product.file" class="break-inside-avoid p-2">
+        <button type="button" class="block w-full cursor-pointer" @click="openModal(product)">
+          <img
+            :src="'/images/' + product.file"
+            :alt="product.alt"
+            :width="product.width"
+            :height="product.height"
+            loading="lazy"
+            decoding="async"
+            class="block w-full h-auto"
+          >
+        </button>
+      </li>
+    </ul>
+    <modal :url="modalPhoto?.url" :caption="modalPhoto?.alt" @close="modalPhoto = null"/>
   </div>
 </template>
 
@@ -15,67 +27,9 @@ defineProps({
   products: Array,
 });
 
-const isModalVisible = ref(false);
-const modalPhoto = ref('');
+const modalPhoto = ref(null);
 
-function openModal(photo) {
-  isModalVisible.value = true;
-  modalPhoto.value = photo;
-}
-
-function closeModal() {
-  isModalVisible.value = false;
-  modalPhoto.value = '';
+function openModal(product) {
+  modalPhoto.value = { url: '/images/' + product.file, alt: product.alt };
 }
 </script>
-
-<style>
-#products {
-  /* Prevent vertical gaps */
-  line-height: 0;
-  -webkit-column-count: 3;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    5;
-  -moz-column-gap:      0px;
-  column-count:         3;
-  column-gap:           0px;
-}
-
-#products img {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
-  cursor: pointer;
-}
-
-@media (max-width: 1200px) {
-  #products {
-    -moz-column-count:    4;
-    -webkit-column-count: 4;
-    column-count:         4;
-  }
-}
-@media (max-width: 1000px) {
-  #products {
-    -moz-column-count:    3;
-    -webkit-column-count: 3;
-    column-count:         3;
-  }
-}
-@media (max-width: 800px) {
-  #products {
-    -moz-column-count:    2;
-    -webkit-column-count: 2;
-    column-count:         2;
-  }
-}
-@media (max-width: 400px) {
-  #products {
-    -moz-column-count:    1;
-    -webkit-column-count: 1;
-    column-count:         1;
-  }
-}
-
-</style>
-

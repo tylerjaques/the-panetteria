@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* Google Fonts are loaded with <link> tags in index.html. */
 @import 'tailwindcss';
 @import './app.css';
 
@@ -8,10 +6,6 @@
   --color-primary: #00B9CE;
 }
 
-/*
-  Tailwind 4 changed the default border color to currentcolor.
-  Keep the v3 default (gray-200) so existing borders look the same.
-*/
 @layer base {
   *,
   ::after,
@@ -19,5 +13,12 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Visible keyboard focus. Using the text colour makes the ring black on
+     white pages and white on the dark header, footer and banner. */
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
   }
 }
