@@ -1,64 +1,105 @@
-﻿{
+{
+  "business": {
+    "name": "The Panetteria",
+    "url": "https://www.thepanetteria.com",
+    "email": "thepanetteria@gmail.com",
+    "phone": "519-730-1801",
+    "address": {
+      "street": "248 Ramsay St",
+      "city": "Amherstburg",
+      "province": "ON",
+      "postalCode": "N9V 1Y2",
+      "country": "CA"
+    },
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=248+Ramsay+St%2C+Amherstburg%2C+ON+N9V+1Y2",
+    "socials": [
+      { "name": "Facebook", "icon": "facebook", "url": "https://www.facebook.com/The.Panetteria/" },
+      { "name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/the.panetteria" }
+    ]
+  },
+  "banner": {
+    "message": "We’re closed for our holiday break from January 1 to January 21, 2026. We’ll reopen on January 22, 2026!",
+    "start": "2025-12-26",
+    "end": "2026-01-21"
+  },
+  "hours": [
+    { "days": ["Monday", "Tuesday"], "opens": null, "closes": null },
+    { "days": ["Wednesday"], "opens": "09:00", "closes": "15:00" },
+    { "days": ["Thursday"], "opens": "09:00", "closes": "15:00" },
+    { "days": ["Friday"], "opens": "09:00", "closes": "16:00" },
+    { "days": ["Saturday"], "opens": "09:00", "closes": "16:00" },
+    { "days": ["Sunday"], "opens": "09:00", "closes": "15:00" }
+  ],
+  "holidayHours": {
+    "start": "2024-12-12",
+    "end": "2025-01-23",
+    "entries": [
+      { "label": "Christmas Eve (pickups only)", "opens": null, "closes": null },
+      { "label": "December 25–27", "opens": null, "closes": null },
+      { "label": "December 28", "opens": "09:00", "closes": "16:00" },
+      { "label": "December 29–31", "opens": "09:00", "closes": "15:00" },
+      { "label": "January 1–22", "opens": null, "closes": null }
+    ]
+  },
   "menu": {
-    "title": "MENU",
+    "title": "Menu",
     "sections": [
       {
         "name": "Breads",
         "items": [
-          "Classic Sourdough",
-          "Multigrain Sourdough",
-          "Focaccia",
-          "Baguette",
-          "Country White Loaf",
-          "Olive Sourdough (weekends)",
-          "Rye Sourdough (weekends)",
-          "Walnut-Raisin Sourdough (weekends)"
+          { "name": "Classic Sourdough" },
+          { "name": "Multigrain Sourdough" },
+          { "name": "Focaccia" },
+          { "name": "Baguette" },
+          { "name": "Country White Loaf" },
+          { "name": "Olive Sourdough", "tags": ["Weekends"] },
+          { "name": "Rye Sourdough", "tags": ["Weekends"] },
+          { "name": "Walnut-Raisin Sourdough", "tags": ["Weekends"] }
         ]
       },
       {
         "name": "Pastries",
         "items": [
-          "Croissant",
-          "Danish",
-          "Pain au Chocolat",
-          "Cookies",
-          "Bars/Brownies",
-          "Cinnamon Buns",
-          "& More!"
+          { "name": "Croissant" },
+          { "name": "Danish" },
+          { "name": "Pain au Chocolat" },
+          { "name": "Cookies" },
+          { "name": "Bars & Brownies" },
+          { "name": "Cinnamon Buns" },
+          { "name": "& More!" }
         ]
       },
       {
         "name": "Lunch",
         "items": [
-          "Sandwiches",
-          "Quiche",
-          "Pizza"
+          { "name": "Sandwiches" },
+          { "name": "Quiche" },
+          { "name": "Pizza" }
         ]
       }
     ]
   },
-  "products" : [
-    "AlmondCroissant.png",
-    "AlmondTart.png",
-    "strawberry-tart.jpg",
-    "ChocolateTart.png",
-    "Croissant3.png",
-    "cinnamon-bun.jpg",
-    "frenchbread-wall.jpg",
-    "meatpie.jpg",
-    "moody-tart.jpg",
-    "peach-tart.jpg",
-    "Pie3.png",
-    "poc.jpg",
-    "raspberry-cookie.jpg",
-    "row-of-croissants.jpg",
-    "sourdough-sunny.jpg",
-    "sourdough-window.jpg",
-    "Sourdough2.png",
-    "tarts.jpg",
-    "TomatoTart.png",
-    "WalnutRaisin2.png",
-    "wholewheat-sourdough.jpg"
+  "products": [
+    { "file": "AlmondCroissant.webp", "width": 500, "height": 333, "alt": "Almond croissants topped with sliced almonds and icing sugar" },
+    { "file": "AlmondTart.webp", "width": 500, "height": 333, "alt": "Almond tart topped with fanned fruit slices" },
+    { "file": "strawberry-tart.webp", "width": 750, "height": 919, "alt": "Strawberry galette dusted with icing sugar" },
+    { "file": "ChocolateTart.webp", "width": 500, "height": 333, "alt": "Chocolate tart with a crumble topping" },
+    { "file": "Croissant3.webp", "width": 510, "height": 340, "alt": "Two croissants on a plate, one cut open to show its layers" },
+    { "file": "cinnamon-bun.webp", "width": 750, "height": 548, "alt": "Iced cinnamon buns" },
+    { "file": "frenchbread-wall.webp", "width": 750, "height": 905, "alt": "A baguette held up against a painted mural" },
+    { "file": "meatpie.webp", "width": 750, "height": 540, "alt": "Golden meat pie on a wooden board" },
+    { "file": "moody-tart.webp", "width": 750, "height": 920, "alt": "Fruit pastry dusted with icing sugar" },
+    { "file": "peach-tart.webp", "width": 750, "height": 919, "alt": "Peach pastry dusted with icing sugar" },
+    { "file": "Pie3.webp", "width": 500, "height": 333, "alt": "Savoury pie cut open to show the filling" },
+    { "file": "poc.webp", "width": 750, "height": 539, "alt": "Pain au chocolat" },
+    { "file": "raspberry-cookie.webp", "width": 750, "height": 928, "alt": "Raspberry thumbprint cookies" },
+    { "file": "row-of-croissants.webp", "width": 750, "height": 561, "alt": "Rows of freshly baked croissants" },
+    { "file": "sourdough-sunny.webp", "width": 750, "height": 548, "alt": "Sourdough loaves stacked in the sun" },
+    { "file": "sourdough-window.webp", "width": 750, "height": 541, "alt": "A round sourdough loaf by the window" },
+    { "file": "Sourdough2.webp", "width": 510, "height": 340, "alt": "Two scored sourdough loaves" },
+    { "file": "tarts.webp", "width": 750, "height": 923, "alt": "Raspberry and mixed-berry custard tarts" },
+    { "file": "TomatoTart.webp", "width": 510, "height": 340, "alt": "Tomato tarts with pesto and basil" },
+    { "file": "WalnutRaisin2.webp", "width": 510, "height": 340, "alt": "Walnut-raisin sourdough loaf" },
+    { "file": "wholewheat-sourdough.webp", "width": 744, "height": 921, "alt": "A hand holding a whole wheat sourdough loaf" }
   ]
 }
-

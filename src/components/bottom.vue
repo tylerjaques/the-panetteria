@@ -1,49 +1,64 @@
 <template>
-  <div class="bottom row flex flex-wrap justify-start">
-      <div class="mt-8">
-        <h2 class="text-2xl">Bakery Hours</h2>
-        <div class="flex flex-wrap md:grid md:grid-cols-2">
-            <label class="justify-self-start">Monday & Tuesday:</label><p>Closed</p>
-            <label class="justify-self-start">Wednesday:</label><p>9am - 3pm</p>
-            <label class="justify-self-start">Thursday:</label><p>9am - 3pm</p>
-            <label class="justify-self-start">Friday:</label><p>9am - 4pm</p>
-            <label class="justify-self-start">Saturday:</label><p>9am - 4pm</p>
-            <label class="justify-self-start">Sunday</label><p>9am - 3pm</p>
-        </div>
-        <h2 v-if="holidayFooterActive" class="text-2xl mt-8">Holiday Hours</h2>
-        <div v-if="holidayFooterActive" class="flex flex-wrap md:grid md:grid-cols-2 mb-8">
-            <label class="justify-self-start">Christmas Eve - Pickups Only:</label><p>Closed</p>
-            <label class="justify-self-start">December 25th - 27th:</label><p>Closed</p>
-            <label class="justify-self-start">December 28th:</label><p>9am - 4pm</p>
-            <label class="justify-self-start">December 29th - 31st:</label><p>9am - 3pm</p>
-            <label class="justify-self-start">January 1st - 22nd:</label><p>Closed</p>
-        </div>
-      </div>
-      <div class="mt-8">
-        <h2 class="text-2xl">Information</h2>
-        <div class="flex flex-wrap md:grid md:grid-cols-2">
-          <label>Email:</label><a href="mailto:thepanetteria@gmail.com">thepanetteria@gmail.com</a>
-          <label>Phone:</label><a href="tel:519-730-1801">519-730-1801</a>
-          <label>Socials:</label><p><a href="https://www.facebook.com/The.Panetteria/"><font-awesome-icon :icon="['fab', 'facebook']" /></a> <a href="https://www.instagram.com/the.panetteria"><font-awesome-icon :icon="['fab', 'instagram']" /></a></p>
-        </div>
-      </div>
-      <div class="my-8">
-        <h2 class="text-2xl">Location</h2>
-        <p>248 Ramsay St</p>
-        <p>Amherstburg, ON, Canada</p>
-        <p>N9V 1Y2</p>
-        <div class="mt-4 map-responsive">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.237069628985!2d-83.1139347845518!3d42.10239327920499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3c84c9d7c001%3A0x1e02cf6f022618b!2s248%20Ramsay%20St%2C%20Amherstburg%2C%20ON%20N9V%201Y2!5e0!3m2!1sen!2sca!4v1618187247268!5m2!1sen!2sca" style="border:0;" allowfullscreen></iframe>
-        </div>
-      </div>
-  </div>
+  <footer class="bottom">
+    <div class="flex flex-wrap gap-x-16 xl:gap-x-24">
+      <section class="mt-8" aria-labelledby="hours-heading">
+        <h2 id="hours-heading" class="text-2xl mb-2">Bakery Hours</h2>
+        <dl class="details">
+          <template v-for="entry in hours" :key="entry.days.join()">
+            <dt>{{ formatDays(entry.days) }}</dt>
+            <dd>{{ formatHours(entry) }}</dd>
+          </template>
+        </dl>
+        <template v-if="holidayActive">
+          <h2 class="text-2xl mt-8 mb-2">Holiday Hours</h2>
+          <dl class="details">
+            <template v-for="entry in holidayHours.entries" :key="entry.label">
+              <dt>{{ entry.label }}</dt>
+              <dd>{{ formatHours(entry) }}</dd>
+            </template>
+          </dl>
+        </template>
+      </section>
+      <section class="mt-8" aria-labelledby="info-heading">
+        <h2 id="info-heading" class="text-2xl mb-2">Information</h2>
+        <dl class="details">
+          <dt>Email</dt>
+          <dd><a :href="`mailto:${business.email}`">{{ business.email }}</a></dd>
+          <dt>Phone</dt>
+          <dd><a :href="`tel:+1-${business.phone}`">{{ business.phone }}</a></dd>
+          <dt>Socials</dt>
+          <dd class="flex gap-4">
+            <a v-for="social in business.socials" :key="social.name" :href="social.url" :aria-label="social.name" class="no-underline">
+              <font-awesome-icon :icon="['fab', social.icon]" />
+            </a>
+          </dd>
+        </dl>
+      </section>
+      <section class="my-8 w-full max-w-md" aria-labelledby="location-heading">
+        <h2 id="location-heading" class="text-2xl mb-2">Location</h2>
+        <address class="not-italic">
+          {{ business.address.street }}<br>
+          {{ business.address.city }}, {{ business.address.province }}, Canada<br>
+          {{ business.address.postalCode }}
+        </address>
+        <p class="mt-2"><a :href="business.directionsUrl">Get directions</a></p>
+        <iframe
+          class="mt-4 w-full max-w-md aspect-[4/3] border-0"
+          title="Map showing The Panetteria at 248 Ramsay St, Amherstburg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.237069628985!2d-83.1139347845518!3d42.10239327920499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3c84c9d7c001%3A0x1e02cf6f022618b!2s248%20Ramsay%20St%2C%20Amherstburg%2C%20ON%20N9V%201Y2!5e0!3m2!1sen!2sca!4v1618187247268!5m2!1sen!2sca"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+  </footer>
 </template>
 
 <script setup>
-const startDate = new Date('12/12/2024');
-const endDate = new Date('01/23/2025');
-const holidayFooterActive = Date.now() >= startDate && Date.now() <= endDate;
-</script>
+import config from '@/assets/data/config.json';
+import { formatDays, formatHours, isActive } from '@/hours.js';
 
-<style scoped>
-</style>
+const { business, hours, holidayHours } = config;
+const holidayActive = isActive(holidayHours);
+</script>

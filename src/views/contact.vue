@@ -1,37 +1,43 @@
 <template>
-  <div class="table">
-    <top class="bg-image bg-no-repeat bg-top"/>
-    <div class="middle row">
-      <div class="container cell w-11/12">
-        <h2 class="page-header libre-baskerville tracking-widest">CONTACT US</h2>
-        <div class="flex">
+  <div class="page">
+    <top class="bg-image"/>
+    <main id="main" tabindex="-1" class="middle">
+      <h1 class="page-header">Contact us</h1>
+      <form class="contact-form max-w-xl mb-8" @submit.prevent="sendEmail">
+        <h2 class="text-xl md:text-2xl mb-2">Questions or Comments?</h2>
+        <p class="mb-6 text-base">Sending opens your email app with your message filled in.
+          Fields marked * are required.</p>
+        <div class="grid gap-4 sm:grid-cols-2">
           <div>
-            <h2 class="text-xl md:text-2xl mb-4">Questions or Comments?</h2>
-            <div class="col-span-6 sm:col-span-3">
-              <label for="first_name" class="block">First name</label>
-              <input v-model="firstName" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-3">
-              <label for="last_name" class="block">Last name</label>
-              <input v-model="lastName" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-4">
-              <label for="email_address" class="block">Email address</label>
-              <input v-model="email" name="email_address" id="email_address" autocomplete="email" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-2 col-span-6 sm:col-span-4">
-              <label for="phone_number" class="block">Phone</label>
-              <input v-model="phone" name="phone_number" id="phone_number" autocomplete="tel" class="mt-1 p-1 block w-full border border-black">
-            </div>
-            <div class="mb-4 col-span-6 sm:col-span-4">
-              <label for="message" class="block">Message</label>
-              <textarea v-model="message" name="message" id="message" class="mt-1 h-24 p-1 block w-full border border-black"></textarea>
-            </div>
-            <button @click="sendEmail" class="p-1 border border-black mb-8">Send</button>
+            <label for="first_name">First name *</label>
+            <input v-model.trim="firstName" id="first_name" name="first_name" autocomplete="given-name" required>
+          </div>
+          <div>
+            <label for="last_name">Last name</label>
+            <input v-model.trim="lastName" id="last_name" name="last_name" autocomplete="family-name">
+          </div>
+          <div>
+            <label for="email_address">Email address *</label>
+            <input v-model.trim="email" type="email" id="email_address" name="email_address" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="phone_number">Phone</label>
+            <input v-model.trim="phone" type="tel" id="phone_number" name="phone_number" autocomplete="tel">
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message">Message *</label>
+            <textarea v-model.trim="message" id="message" name="message" rows="5" required></textarea>
           </div>
         </div>
-      </div>
-    </div>
+        <button type="submit" class="button mt-6">Send</button>
+        <p class="mt-4 text-base" role="status">
+          <template v-if="sent">
+            Your email app should now be open with your message. If it didn’t open,
+            email us at <a :href="`mailto:${business.email}`">{{ business.email }}</a>.
+          </template>
+        </p>
+      </form>
+    </main>
     <bottom />
   </div>
 </template>
@@ -40,34 +46,40 @@
 import { ref, computed } from 'vue';
 import top from '../components/top.vue';
 import bottom from '../components/bottom.vue';
+import config from '../assets/data/config.json';
+
+const { business } = config;
 
 const firstName = ref('');
 const lastName = ref('');
 const email = ref('');
 const phone = ref('');
 const message = ref('');
+const sent = ref(false);
 
 const fullName = computed(() => `${firstName.value} ${lastName.value}`.trim());
 
+// The form has no backend: it hands the message to the visitor's email app.
+// We can't tell whether that worked, so the fields keep their text.
 function sendEmail() {
   const subject = `Contact Us: ${fullName.value}`;
   const body = `Full name: ${fullName.value}
 Email: ${email.value}
 Phone: ${phone.value}
 Message: ${message.value}`;
-  window.location.href = `mailto:thepanetteria@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  firstName.value = '';
-  lastName.value = '';
-  email.value = '';
-  phone.value = '';
-  message.value = '';
+  window.location.href = `mailto:${business.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  sent.value = true;
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .bg-image {
-  background-image: url('/images/head-contact.png');
+  background-image: url('/images/head-contact-1000.webp');
+}
+
+@media (min-width: 1000px), (min-resolution: 2dppx) {
+  .bg-image {
+    background-image: url('/images/head-contact-2000.webp');
+  }
 }
 </style>
