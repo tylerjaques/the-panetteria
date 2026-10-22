@@ -1,64 +1,121 @@
+/* Each view is a column that fills the screen, so the footer sits at the
+   bottom even when the page content is short. */
+.page {
+    @apply flex min-h-dvh flex-col;
+}
+
+/* Keep the page from scrolling behind the photo dialog. */
+html:has(dialog[open]) {
+    overflow: hidden;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 50;
+
+    @apply px-4 py-2 bg-white text-black montserrat;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
 .top {
-    background-size: auto;
-
-    @apply flex flex-wrap justify-end md:content-end bg-cover;
+    @apply bg-cover bg-top bg-no-repeat;
 }
 
-.top .title {
-    @apply text-2xl md:text-3xl lg:text-4xl;
+.top .title img {
+    @apply block max-w-full h-auto;
 }
 
-.top .page {
-    @apply whitespace-nowrap w-full xl:w-auto xl:mr-16 mt-2 libre-baskerville;
+.nav {
+    @apply flex flex-wrap gap-x-6 md:gap-x-12 gap-y-1 px-4 md:px-16 py-2 bg-black/75 xl:justify-end libre-baskerville uppercase;
+}
+
+.nav-link {
+    @apply whitespace-nowrap underline-offset-8 decoration-2 hover:underline;
+}
+
+.nav-link[aria-current="page"] {
+    @apply underline decoration-primary;
 }
 
 .middle {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 180px);
-
-    @apply mx-4 md:mx-16 text-lg md:text-xl montserrat;
+    @apply flex flex-1 flex-col mx-4 md:mx-16 text-lg md:text-xl montserrat;
 }
 
-.bottom {
-    @apply justify-start mt-0 text-white text-base md:text-lg bg-black libre-baskerville;
-
+/* <main> takes focus from the skip link; it doesn't need a ring. */
+.middle:focus {
+    outline: none;
 }
 
-.bottom > div {
-    @apply mx-4 md:mx-16;
-}
-
-.bottom label {
-    @apply w-44 md:w-64;
-}
-
-html,
-body {min-height:100%; padding:0; margin:0;}
-
-
-.table {width:100%; height:100%;}
-.row {
-    display:table-row;
-}
-.cell {
-    /*display:table-cell;*/
-}
-
-.container {
-    @apply mx-4 md:mx-16;
+.middle a:not(.button),
+.bottom a {
+    @apply font-semibold underline decoration-primary decoration-2 underline-offset-4;
 }
 
 .page-header {
-    @apply text-4xl mt-4 md:mt-8 mb-4 md:mb-8;
+    @apply text-4xl mt-4 md:mt-8 mb-4 md:mb-8 libre-baskerville tracking-widest uppercase;
+}
+
+/* A short teal rule under each page title. */
+.page-header::after {
+    content: '';
+
+    @apply block w-16 h-1 mt-3 bg-primary;
+}
+
+.bottom {
+    @apply px-4 md:px-16 text-white text-base md:text-lg bg-black libre-baskerville;
+}
+
+.bottom .details {
+    @apply grid grid-cols-[auto_1fr] gap-x-8 gap-y-1;
+}
+
+.bottom a.no-underline {
+    text-decoration: none;
+}
+
+.button {
+    @apply inline-block px-6 py-3 border-2 border-black bg-black text-white text-base uppercase tracking-widest libre-baskerville no-underline transition-colors cursor-pointer;
+}
+
+/* Text on teal stays black: white on teal is only 2.3:1. */
+.button:hover {
+    @apply border-primary bg-primary text-black;
+}
+
+.button-light {
+    @apply border-white bg-white text-black;
+}
+
+.button-outline {
+    @apply border-white bg-transparent text-white;
+}
+
+.contact-form label {
+    @apply block mb-1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    @apply block w-full p-3 border border-black bg-white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    @apply border-primary;
+}
+
+.tag {
+    @apply ml-2 inline-block px-2 py-0.5 align-middle bg-primary text-black text-xs font-semibold uppercase tracking-widest;
 }
 
 @utility libre-baskerville {
     font-family: 'Libre Baskerville', serif;
-}
-
-@utility baskerville {
-    font-family: 'Baskervville', serif;
 }
 
 @utility montserrat {

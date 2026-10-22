@@ -1,15 +1,21 @@
 <template>
-  <div class="top row text-lg md:text-2xl text-white ">
-      <div class="cell flex flex-wrap mt-4 md:mt-8 xl:mb-0">
-        <div class="mx-4 md:mx-16 mb-4 md:mb-8 w-full">
-            <router-link class="title" to="/"><img src="/images/Logo.jpg" alt="The Panetteria"></router-link>
-        </div>
-        <div class="flex flex-wrap px-4 md:px-16 pb-2 bg-black/75 w-full tracking-widest">
-          <router-link class="page" to="/menu">MENU</router-link>
-          <router-link class="page" to="/about">ABOUT US</router-link>
-          <router-link class="page" to="/contact">CONTACT US</router-link>
-        </div>
-      </div>
-  </div>
+  <header class="top text-lg md:text-2xl text-white tracking-widest" :class="{ 'bg-black/50': overlay }">
+    <div class="mx-4 md:mx-16 mt-4 md:mt-8 mb-4 md:mb-8">
+      <router-link class="title inline-block" to="/">
+        <img src="/images/Logo.jpg" alt="The Panetteria home" width="612" height="205">
+      </router-link>
+    </div>
+    <nav aria-label="Main" class="nav">
+      <router-link class="nav-link" to="/menu">Menu</router-link>
+      <router-link class="nav-link" to="/about">About us</router-link>
+      <router-link class="nav-link" to="/contact">Contact us</router-link>
+    </nav>
+  </header>
 </template>
 
+<script setup>
+defineProps({
+  // Darken the header so it reads over the full-page photo on the home page.
+  overlay: Boolean,
+});
+</script>
