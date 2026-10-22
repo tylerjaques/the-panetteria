@@ -38,4 +38,6 @@ The site is hosted on AWS Amplify, which builds and deploys automatically when c
 
 So the usual flow is: make changes, merge into `demo`, check staging, then merge into `main`.
 
+`amplify.yml` is the build spec and overrides the console's build settings. It pins Node 22 via nvm, which needs the Amazon Linux 2023 build image, then runs `npm ci` and `npm run build` and publishes `dist/`.
+
 `customHttp.yml` sets the response headers Amplify serves, including HSTS, X-Frame-Options and the Content-Security-Policy. When you add a new third-party script, font, image host or iframe, add its origin to the matching CSP directive there, or the browser will block it.
